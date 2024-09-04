@@ -1,0 +1,71 @@
+
+
+
+.i_mmm
+	padding-right 0px !important
+	font-weight bold
+	display flex
+	flex-direction column
+	justify-content center
+	&:before
+		content "\f410"
+		font-size 2.5em
+		position relative
+		font-family 'fontawesome'
+	&:hover
+		text-decoration none !important
+	&.mmm_d
+		// color red
+		@media $small-medium
+			display none
+	&.mmm_m
+		// color green
+		@media $large
+			display none
+
+@media $large
+	.menu_colapsed
+		.i_mmm
+			&:before
+				content "\f0c9"
+
+@media $small-medium
+	.menu_colapsed_mobile
+		.i_mmm
+			&:before
+				content "\f0c9"
+
+.logo_panel		
+	border 0
+	img
+		opacity 1
+		max-height 80px
+		max-width 200px
+	&:hover img
+		opacity 1
+		
+.link_header	
+	opacity 1
+	letter-spacing 0px
+	font-weight bold
+	padding 0 0
+	font-size 1.6em
+	font-weight bold
+	color #666
+
+.cabecera
+	background none repeat scroll 0 0 #FFFFFF
+	border-radius 8px 8px 8px 8px
+	box-shadow 0 0 17px #000000
+	clear left
+	float left
+	height auto
+	margin-bottom 0
+	margin-top -5px
+	padding 1px 0 4px 3px
+	position absolute
+	max-width 60%
+	width auto
+	z-index 1
+	margin-left -2px
+

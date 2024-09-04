@@ -1,0 +1,85 @@
+//- ****
+//- Archivo: view_import_csv.jade
+//- Archivo Transpilado: panel/views/dist/view_import_csv.php
+//- Author: Sinesss
+//- Tipo: Plantilla de vista PHP
+//- Lenguaje: Pug
+//- Descripción:  Este archivo es el template jade del paso 2, para importar aportaciones desde un archivo excel
+//- ****
+//- 
+
+.container.div_bloque_cuerpo
+	.bloque_titulo#barra_titulo: .titulo: div
+		a.type_file(href="pages.php?page=import2") Importar Aportaciones desde un archivo
+
+	.alert.alert-primary.mb-0 Importador Versión 2
+
+	.card: .card-body
+		.row
+			.col-6
+				.card-title INSTRUCCIONES
+				.alert.alert-primary 
+					ul
+						li 1.-Podemos ver el archivo cargado con sus PESTAÑAS por separado.
+						li 2.-Podemos revisar las aportaciones que ha reconocido el sistema.
+						li 3.-La Leyenda cuenta con Botones que ayudan a la REVISION
+						li 4.-Si la PESTAÑA contiene aportaciones disponibles para importar, aparecerá el botón IMPORTAR
+						li 5.-Se importa PESTAÑA por PESTAÑA		
+			.col-4
+				.card-title LEYENDA
+				ul.leyenda
+					li.unreconized: a #[span#num_unreconized ] Persona no reconocida
+					li.hubo_primary: a #[span#num_hubo_primary ] Aporte Regular ya ingresado
+					li.hubo_secondary: a #[span#num_hubo_secondary ] Aporte CAEE ya ingresado
+					li.habra_primary: a #[span#num_habra_primary ] Aporte Regular por ingresar
+					li.habra_secondary: a #[span#num_habra_secondary ] Aporte CAEE por ingresar
+					li.todos: a #[span#num_todos ] TODOS
+
+
+			.col-2
+				.card-title VOLVER A PASO PREVIO
+				.text-center
+					a.btn.btn-primary(href="pages.php?page=import2") VOLVER
+
+	ul.nav.nav-tabs
+		li.nav-item#cargando: h6.nav-link.pl-0 CARGANDO....
+		li.nav-item: h6.nav-link.pl-0 #{file}
+		each sheet,index in sheets
+			- active = sheet.active
+			li.nav-item
+				if (active=='active')
+					div(Class="nav-link active")
+						if sheet.url
+							a(href="#{sheet.url}") #{sheet.text}
+							span#button-import.ml-3(style="display:none;"): span(Class="badge badge-primary #{active}") IMPORTAR
+						else
+							span #{sheet.text}
+							span#button-import.ml-3(style="display:none;"): span
+				else
+					a.nav-link(href="#{sheet.url}") #{sheet.text}
+
+	.table_container
+		table(Class="tabla_csv table table-bordered table-sm table-striped")
+			thead
+				each row in headers
+					tr
+						each cell,cellindex in row
+							th(
+								Class=" #{cellindex} ",
+								scope='col',
+								colspan="#{cell.colspan}",
+								rowspan="#{cell.rowspan}"
+								) #{cell.text}
+			tbody
+				each row in items
+					- rowclass=row.class
+					tr(Class=" #{rowclass} ")
+						each cell,cellindex in row.items
+							td(Class="#{cellindex}") 
+								if cell.url
+									a(href="#{cell.url}") #{cell.text}
+								else
+									span #{cell.text}
+	form#importform(method="post",action="#{buttonurl}")
+		textarea#import-primary(name="primary",style="display:none;") #{primaries}
+		textarea#import-secondary(name="secondary",style="display:none;") #{secondaries}

@@ -1,0 +1,23 @@
+//- ****
+//- Archivo: settlements_list_after.jade
+//- Archivo Transpilado: panel/views/dist/settlements_list_after.php
+//- Author: Sinesss
+//- Tipo: Plantilla de vista PHP
+//- Lenguaje: Pug
+//- Descripción:  Este archivo es el template jade de las secciones (al hacer click en boton reportes) de la pagina de listado de bases
+//- ****
+//- 
+
+ul.nav.nav-tabs.menu_detail.menu_people_detail
+    li: h4.mr-3.ml-2 REPORTES
+    li.nav-item: a.nav-link(  
+        class="link-locations",          
+        onclick="ax('paginaUrl','','1','PRIMARY_SHARES','inner_after','&middlewarelist=totales','sub')"
+        ) Aportaciones Regulares
+    li.nav-item: a.nav-link(  
+        class="link-locations",          
+        onclick="ax('paginaUrl','','1','SECONDARY_SHARES','inner_after','&middlewarelist=totales','sub')"
+        ) Aportaciones CAEE
+    li.nav-item: a.nav-link(            
+        onclick="ax('paginaUrl','','1','PAYMENTS','inner_after','&middlewarelist=totales','sub')"
+        ) Otros Pagos

@@ -1,0 +1,58 @@
+//- ****
+//- Archivo: view_form_shares.jade
+//- Archivo Transpilado: panel/views/dist/view_form_shares.php
+//- Author: Sinesss
+//- Tipo: Plantilla de vista PHP
+//- Lenguaje: Pug
+//- Descripción:  Este archivo es el template jade del formulario para agregar aportaciones
+//- ****
+//- 
+
+include ../../../../work-panel/sources/jade/formMixins.jade
+
+.modal-dialog(role="document",data-maxwidth="#{maxXidth}")
+    .modal-content: form(method="post",name="modalForm",class="modalForm")
+        .modal-header
+            h5.modal-title #{title}
+            button.close(type='button', data-dismiss='modal', aria-label='Close'): span(aria-hidden='true') ×
+        .modal-body
+            .container
+                if person
+                    .alert.alert-primary(role="alert") 
+                        div: h6 Persona 
+                        div #{person}
+                if blocks
+                    .control_shares
+                        each block in blocks
+                            //- h3 #{block.nombre}
+                            .row-table
+                                table.table.table-bordered.table-sm
+                                    thead
+                                        th 
+                                        each row in monthA
+                                            th(scope='col') #{row}
+                                    tbody
+                                        each months,year in block.calendar
+                                            tr
+                                                td.year #{year}
+                                                each item in months
+                                                    td(Class="status #{item.state}"): label(title="#{item.date}")
+                                                        if(item.state=='payed')
+                                                            span.status
+                                                        else
+                                                            if(item.button=='radio')
+                                                                input(id="share_#{item.value}",type="radio",name="share",value="#{item.value}")
+                                                            else
+                                                                input(id="share_#{item.value}",type="checkbox",name="share",value="#{item.value}")
+                                    tfoot
+                                        th 
+                                        each row in monthA
+                                            th(scope='col') #{row}
+                .row: +form('modalForm',fields) 
+            #modal_response
+        .modal-footer
+            button.btn.btn-primary#btn-submit(type='button') #{button}
+            button.btn.btn-secondary(
+                type='button', 
+                data-dismiss='modal', 
+                ) CERRAR

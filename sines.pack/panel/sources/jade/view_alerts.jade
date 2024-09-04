@@ -1,0 +1,31 @@
+//- ****
+//- Archivo: view_alerts.jade
+//- Archivo Transpilado: panel/views/dist/view_alerts.php
+//- Author: Sinesss
+//- Tipo: Plantilla de vista PHP
+//- Lenguaje: Pug
+//- Descripción:  Este archivo es el template jade de las secciones de la pagina de "alertas" del menú
+//- ****
+//- 
+
+.div_bloque_cuerpo
+    .bloque_titulo#barra_titulo: .titulo: div: a.type_file(href="pages.php?page=alerts") Alertas
+    
+    ul.nav.menu_detail.nav-tabs.menu_page_alerts
+        li.nav-item: a.nav-link(  
+            class="link-primaryshares",          
+            onclick="ax('paginaUrl','','1','PEOPLE','inner_after','','sub','1','0')"
+            ) Aportaciones Regulares
+        li.nav-item: a.nav-link(  
+            class="link-secondaryshares",          
+            onclick="ax('paginaUrl','','1','PEOPLE','inner_after','','sub','2','0')"
+            ) Aportaciones CAEE
+        li.nav-item: a.nav-link(  
+            class="link-records",          
+            onclick="ax('paginaUrl','','1','RECORDS','inner_after','','sub','','0')"
+            ) Historial
+        li.nav-item: a.nav-link(  
+            class="link-records",          
+            onclick="ax('paginaUrl','','1','SETTLEMENT_MANAGMENT_GROUP','inner_after','','sub','','0')"
+            ) Junta Directiva
+    #inner_after.inner_listado

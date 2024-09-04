@@ -1,0 +1,19 @@
+{
+  "name": "panel",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {},
+  "description": "panel ===== readme ERP CORE",
+  "directories": {
+    "lib": "lib"
+  },
+  "devDependencies": {
+    "nib": "^1.1.2",
+    "stylus": "^0.54.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": ""
+}

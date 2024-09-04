@@ -1,0 +1,22 @@
+//- ****
+//- Archivo: zones_detail_after.jade
+//- Archivo Transpilado: panel/views/dist/zones_detail_after.php
+//- Author: Sinesss
+//- Tipo: Plantilla de vista PHP
+//- Lenguaje: Pug
+//- Descripción:  Este archivo es el template jade de las secciones (de la parte infeior) de la pagina de detalle de una red asistencial
+//- ****
+//- 
+
+ul.nav.nav-tabs.menu_detail.menu_people_detail
+    li.nav-item: a.nav-link(   
+        class="link-locations",         
+        onclick="ax('paginaUrl','','1','LOCATIONS','inner_after','&id_zone=#{linea.id}','sub')"
+        ) Entes
+    li.nav-item: a.nav-link(            
+        onclick="ax('paginaUrl','','1','PEOPLE','inner_after','&LOCATIONS,id_zone=#{linea.id}','sub')"
+        ) Personas
+    li.nav-item: a.nav-link(            
+        onclick="ax('paginaUrl','','1','SETTLEMENTS','inner_after','&id_zone=#{linea.id}','sub')"
+        ) Bases
+

@@ -1,0 +1,178 @@
+
+body {
+	font-size: 8px;
+}
+a[href]:after {
+	content: none !important;
+}
+.foot {
+	display: none;
+}
+ul.ul_menus {
+	display: none;
+}
+#dfilters {
+	display: none;
+}
+
+.inner_listado .braz {
+	display: none;
+}
+.menus {
+	display: none !important;
+}
+#linea_buscador {
+	display: none;
+}
+.bloque_titulo #abri_cerrar_repos,
+.bloque_titulo #abri_cerrar_mass,
+.bloque_titulo #abri_cerrar_crear,
+.bloque_titulo #boton_imprimir,
+.bloque_titulo #boton_excel {
+	display: none;
+}
+#msino {
+	display: none;
+}
+#ic_menu,
+#ic_filters {
+	display: none;
+}
+.cd,
+.ie,
+.lc,
+a.expanlink,
+a.colaplink {
+	display: none;
+}
+.pagination ul li {
+	display: none;
+}
+.pagination ul li.active {
+	display: inline;
+}
+.pagination ul li.active a {
+	border: 0;
+}
+.pagination ul li:first-child{
+	display: none;	
+}
+input[type="checkbox"] {
+	display: none;
+}
+
+div.menu_colapsed  div.line_content,
+div.menu_colapsed  div.bloque_titulo,
+div.menu_colapsed  div.div_bloque_cuerpo,
+div.menu_colapsed  div.inner_listado,
+
+div.line_content,
+div.bloque_titulo,
+div.div_bloque_cuerpo,
+div.inner_listado 
+{
+	margin-left: 0 !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	left: 0 !important;
+	width: 100% !important;
+	display: block !important;
+	float: left !important;
+	clear: left !important;
+	/*border: 1px solid #000 !important;*/
+	text-align: left !important;
+}
+
+.bloque_titulo {
+	border: 0 !important;
+}
+a i,
+a:hover,
+a {
+	text-decoration: none !important; 	
+	font-weight: normal !important;
+}
+/*
+
+ul.supra_menu {
+	display: none !important;
+}
+
+
+
+
+.bloque_titulo #abri_cerrar_stat {
+	display: none;
+}
+
+.bloque_titulo #abri_cerrar_crear {
+	display: none;
+}
+
+.bloque_titulo .linkstitu {
+	display: none;
+}
+
+body,#div_allcontent,#contenido_principal {
+	background: #FFF !important;
+	border: 0 !important;
+	border-radius: 0px !important;
+	box-shadow: 0 0 0px #FFF !important;
+}
+
+.bloque_titulo {
+	border-radius: 0px !important;
+	border-top: 0px !important;
+	border-left: 0px !important;
+	border-right: 0px !important;
+}
+
+
+
+.barbar2 span {
+	display: none;
+}
+
+.barbar2 form {
+	display: none;
+}
+
+.train span,.train a {
+	display: none;
+}
+
+.train .linkpagselec {
+	display: block;
+}
+
+.cd {
+	visibility: hidden;
+}
+
+.lc {
+	visibility: hidden;
+}
+
+.colaplink {
+	visibility: hidden;
+}
+
+.expanlink {
+	visibility: hidden;
+}
+
+.cr_pl {
+	display: none;
+}
+
+.itmedit {
+	display: none;
+}
+
+#segunda_barra_3 {
+	display: none;
+}
+
+#inner {
+	border-bottom: 0 !important;
+}*/

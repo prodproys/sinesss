@@ -1,0 +1,14 @@
+ul#menu_main.ul_menus
+    for grupo in grupos
+        if(grupo.checked)
+            input.check_padre(name="menu_left",type="checkbox",id="menu_group_#{grupo.item}","checked")
+        else
+            input.check_padre(name="menu_left",type="checkbox",id="menu_group_#{grupo.item}")
+        li.group
+            label.padre(for="menu_group_#{grupo.item}")!=grupo.text
+            .mcontent: ul
+                for item in grupo.items
+                    li(CLASS="#{item.class}")
+                        a(href="#{item.href}") #{item.text}
+
+

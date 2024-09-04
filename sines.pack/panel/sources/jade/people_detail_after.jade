@@ -1,0 +1,40 @@
+//- ****
+//- Archivo: people_detail_after.jade
+//- Archivo Transpilado: panel/views/dist/people_detail_after.php
+//- Author: Sinesss
+//- Tipo: Plantilla de vista PHP
+//- Lenguaje: Pug
+//- Descripción:  Este archivo es el template jade de las secciones (de la parte infeior) de la pagina de detalle de una persona
+//- ****
+//- 
+
+ul.nav.nav-tabs.menu_detail.menu_people_detail
+    li.nav-item: a.nav-link(  
+        class="link-summary",
+        onclick="ax('paginaUrl','','1','PRIMARY_SHARES','inner_after','&middlewarelist=summary&id_persona=#{linea.id}','sub')"
+        ) Resúmen
+    li.nav-item: a.nav-link(  
+        class="link-primaryshares",          
+        onclick="ax('paginaUrl','','1','PRIMARY_SHARES','inner_after','&id_persona=#{linea.id}','sub')"
+        ) Aportaciones Regulares
+    li.nav-item: a.nav-link(  
+        class="link-secondaryshares",          
+        onclick="ax('paginaUrl','','1','SECONDARY_SHARES','inner_after','&id_persona=#{linea.id}','sub')"
+        ) Aportaciones CAEE
+    li.nav-item: a.nav-link(  
+        class="link-payments",          
+        onclick="ax('paginaUrl','','1','PAYMENTS','inner_after','&id_persona=#{linea.id}','sub')"
+        ) Otros Pagos
+    li.nav-item: a.nav-link(  
+        class="link-records",          
+        onclick="ax('paginaUrl','','1','RECORDS','inner_after','&id_persona=#{linea.id}','sub')"
+        ) Historial
+    li.nav-item: a.nav-link(  
+        class="link-documents",          
+        onclick="ax('paginaUrl','','1','DOCUMENTOS','inner_after','&id_persona=#{linea.id}','sub','3')"
+        ) Documentos
+    li.nav-item: a.nav-link(  
+        class="link-operations",          
+        onclick="ax('paginaUrl','','1','OPERATIONS','inner_after','&id_persona=#{linea.id}','sub')"
+        ) Operaciones
+

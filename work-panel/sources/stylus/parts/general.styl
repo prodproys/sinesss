@@ -1,0 +1,449 @@
+:root 
+	--header_height:HEADER_HEIGHT
+
+
+body
+	font-family 'Roboto',"Helvetica Neue",Helvetica,Arial,sans-serif,"Arial Narrow",Helvetica,calibri
+	// font-family 'gdsherpa'
+	// @media $large
+	// 	font-size 12px
+	// @media $small-medium
+	// 	font-size 12px		
+	font-size 12px
+	color #67757c
+	// color #0c0d0e
+	width 100%
+	// background-color lighten(component_bg,10) !important
+	// background-image none !important
+	padding 0
+	min-height 100vh
+
+ul, 
+ol, 
+li  
+	margin-left 0
+	margin-top 0
+	list-style none
+	padding-inline-start 0px
+	
+
+[class*="span"]
+	margin-left 0px
+	padding-left 5px
+
+a,a:not([href])
+	color color_3
+	&:hover
+		color color_2
+		text-decoration underline
+a,
+.alink
+	cursor pointer
+	text-decoration none
+
+
+
+.alink
+	color #3B5998 !important
+	cursor pointer
+	text-decoration none
+
+
+
+
+
+
+
+
+
+
+.mooeditable-iframe
+	background url("../img/bg_inputs.png") no-repeat scroll 0 0px #FFFFFF
+
+
+.img_default
+	height 50px
+	width 100%
+
+
+.red
+	color red !important
+
+.green
+	color green !important
+
+.black
+	color black !important
+
+.teal
+	color teal !important
+
+.navy
+	color navy !important
+
+.bold
+	font-weight bold !important
+
+
+
+
+
+.mooeditable-ui-button-overlay .overlay-content
+	padding 1px !important
+
+.mooeditable-ui-button-overlay .overlay-content a
+	text-align left
+	display block
+	border-bottom 1px solid #DCDCDC
+	background-color #FFFFFF
+	padding 3px 6px
+
+.mooeditable-ui-button-overlay .overlay-content a:hover
+	background-color #DCDCDC
+
+.mooeditable-ui-toolbar .mooeditable-ui-button
+	color #900 !important
+	font-weight bold
+
+
+h2
+	font-size 20px
+	font-weight bold
+
+div.prin pre
+	z-index 1
+	border-radius 3px
+	margin-bottom 1px
+	padding 2px 5px
+	float left
+	text-align left
+	position relative
+	background-color #333 !important
+	color #FFFFFF !important
+	font-size 9px
+
+i
+	font-style normal
+
+
+body.quick
+	background #FFF !important
+	font-size 12px
+	margin-top 5px
+	#div_allcontent
+		min-width 0
+	.contenido_principal
+		background none !important
+		box-shadow none
+		border-radius 0
+	.formulario
+		border 0
+		padding 0px 0 0px 0px
+		label
+			padding-top 0px
+			padding-bottom 0px
+			padding-left 5px
+			font-weight normal
+	.boton_right
+		display none
+	.titulo_formulario
+		font-size 1.4em
+		font-weight bold
+		margin 0
+		padding 0 3px
+		text-transform uppercase
+
+
+
+
+
+
+.MultiBoxContainer
+	background rgba(color_1,0.3) !important
+	position absolute !important
+	text-align left !important
+	z-index 103 !important
+	box-shadow 1px 1px 20px rgba(0,0,0,0.6) !important
+	border-radius 12px !important
+	border 1px solid #f6f6f5 !important
+	// border 5px solid #FFFFFF !important
+	// background linear-gradient(bottom, #E8e8e8, #F2F2F1) !important     
+
+
+.MultiBoxClose
+	right -5px !important
+	top -5px !important
+	background none !important
+	&:before
+		font-family 'icomoon'    
+		content "\e681"
+		font-size 16px
+		left 0px
+		top 7px
+		color #666
+		position absolute
+		&:hover
+			color color_2
+
+
+
+.ToolTips
+	background-color transparent
+
+
+
+
+
+
+/*FIX*/
+.bl:hover
+	margin-left 0px
+
+
+
+.MultiBoxControls
+	background color_1 !important
+
+.itms_cont
+	display inline
+	clear none
+
+
+input[type="checkbox"].chk
+	margin-top -1px
+
+.lchk .nc input[type="checkbox"]
+	margin-top -1px
+	margin-left 2px
+
+
+
+
+
+
+
+.vertical
+	height 200px
+	white-space nowrap
+	overflow hidden
+	div
+		text-transform uppercase
+		transform rotate(-90deg) translate(-179px,-3px)
+		width 20px
+		font-weight normal
+		color black
+		margin 0 auto
+
+
+div.prin
+	float left
+	width 100%
+
+// programar alerta
+
+.prog
+	outline 1px solid color_2
+	background-color #F7F3DE !important
+
+.prog .cr_pl
+	border 1px solid color_2
+	border-top 0
+	background-color #F7F3DE !important
+
+.alert-prog
+	background-color color_2
+	color #FFFFFF
+	cursor pointer
+	left -100px
+	padding 5px 0
+	position absolute
+	text-align center
+	top 28px
+	width 100px
+	z-index 1
+	height 18px
+
+
+div.loading
+	clear right
+	float right
+
+
+
+div.segunda_linea,
+div.loading
+	width 100%
+
+div.loading
+	clear left    
+
+// justlist
+.justlist
+	.menus,
+	.ul_menus,
+	.foot.bloque,
+	#ic_menu,
+	#ic_filters,
+	.logo_panel,
+	.link_header,
+	.filters,
+	.bloque_titulo #boton_imprimir,
+	.bloque_titulo #boton_excel,
+	#linea_buscador,
+	#buscar,
+	#msino,
+	.i_mmm,
+	.logo_panel
+	.link_header
+		display none !important
+		.Tooltips
+			margin-right -100% !important 
+	.div_bloque_cuerpo
+		margin-left 0
+		margin-top 10px
+		width 100% !important
+.itr
+	float right
+	height 16px	
+	margin-right 6px
+.itl
+	float left
+	height 16px
+	margin-right 5px
+	width 16px
+
+
+.modulo_login
+	height 100vh
+	display flex
+	flex-direction column
+	align-items center
+	justify-content center
+	.link_header
+		display none
+	.main_content
+		justify-content space-between
+		margin-bottom 10px
+	.bloque_titulo
+		display none
+	.i_mmm
+		display none
+	#msino
+		display none
+	#bloque_content_crear
+		margin 30px 0
+		// padding 40px 0
+		box-shadow initial
+	#div_allcontent
+		border 1px solid #cccccc
+		width 630px
+		min-width 0px
+		#ic_menu,#ic_filters
+			display none
+		.line_content
+			display flex
+			flex-direction row
+			align-items center
+			justify-content center
+			.div_bloque_cuerpo
+				float none
+				width 60%
+				margin-bottom 70px
+				margin-left 0
+		.bloque_titulo
+			border 0
+			// background-color #eee !important
+		.inner_listado
+			height 0
+			display none !important
+		.foot
+			position absolute
+			bottom 0
+			right 0
+			
+.ToolTips .message
+	margin-bottom 0px
+	margin-top -14px
+	min-height 20px
+
+.controls-rows
+	display flex
+	flex-direction row
+	justify-content space-between
+	align-items center
+	&#control_filters
+		overflow auto
+	&.-webkit-scrollbar
+		display none
+	-ms-overflow-style none
+	scrollbar-width none
+	padding 0.3em 0em .3em 0
+	.sub-controls
+		flex-grow 1
+		text-align right
+		a.btn-excel
+			margin-left 1em
+			margin-right .5em
+			// background-color transparent
+			&:before
+				font-family: fontawesome
+				content "\f1c3"
+				margin-right .5em
+		a.btn-print
+			margin-left 1em
+			margin-right .5em
+			// background-color transparent
+			&:before
+				font-family: fontawesome
+				content "\f02f"
+				margin-right .5em
+	
+	// padding-right 1em
+
+#inner_after
+	padding-top 1em
+	min-height 100px
+	position relative
+	background white
+
+#new_refreshing
+	z-index 4
+	// opacity .1
+	height 100%
+	width 100%	
+	display flex
+	justify-content center
+	position absolute
+	background rgba(white,.5)
+	&:after
+		content ""
+		background transparent url('../img/refreshing_prodiserv2.svg') no-repeat top center
+		height 100%
+		width 100%	
+		position absolute
+		background-size 100px
+
+.table
+	background white;
+
+.mode_main
+	#inner
+		display block
+	#inner_after
+		display none
+	.menu_detail
+		display none
+
+.mode_sub
+	#inner
+		display none
+	#inner_after
+		display block
+	.menu_detail
+		display flex
+
+.ma-container
+	position absolute !important
+	background white !important
+	ul
+		margin 0

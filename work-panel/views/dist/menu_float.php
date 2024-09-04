@@ -1,0 +1,1 @@
+<ul class="li_cabecera"><?php if ($items) : foreach ($items as $item) : $■['item'] = $item; ?><li><?php echo $item ?></li><?php endforeach; endif ?></ul>

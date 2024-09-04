@@ -1,0 +1,130 @@
+
+
+googleFonts=false;
+// googleFonts='Orbitron|Merriweather';
+// googleFonts='Roboto|Oswald:wght@700|Bebas+Neue';
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap')
+
+if googleFonts
+	@import url('https://fonts.googleapis.com/css?family='+googleFonts)
+
+// @import url(//db.onlinewebfonts.com/c/0aee6008b82cde991ec28387169bb13e?family=GD+Sherpa)
+
+@import icomoon
+@import fontawesome
+
+
+// @import normalize
+
+color_0=#000 // color negro general
+color_1=rgba(#E1ECED,0.5) // bg barra principal
+
+// color_1=rgba(#5ab4e6,0.1) // bg barra principal
+
+color_2=#CF6A27 // color secundario // el naranja
+// color_2=#FA4B2A;
+color_3=#004B91 // color de links // el azul
+// color_3=#136CB2 // color de links // el azul
+color_4=#283442   // color de bg menú
+color_5=white // #fea100 // color de letra de menú // el blanco
+// color_6=#fefef5
+color_6=#fff5dd // #fea100 // color amarillo de resaltado
+
+$verde=#89BC58;
+// color_3=navy
+// color_2=complement(color_3)
+// color_1=#eee
+// color_2=grey
+// color_3=navy
+
+
+
+
+component_link_color=#004b91
+component_color=#000000
+component_bg=#fff
+component_color_active=#000000
+component_bg_active=#f0f6f6
+
+
+
+
+
+MAX_WIDTH=1450px // ancho maximo de la pagina
+MENU_WIDTH=260px // ancho del menú
+MARGIN_MENU=30px // distanci del menú al contenido
+HEADER_HEIGHT=100px
+
+
+
+maxwide            = MAX_WIDTH
+tablet             = 992px
+mobile             = 600px
+
+// media queries
+$small        = 'only screen and (max-width : '+mobile+')'
+$small-medium = 'only screen and (max-width : '+tablet+')'
+$large        = 'only screen and (min-width : '+tablet+')'
+$medium-large = 'only screen and (min-width : '+mobile+')'
+$maxim        = 'only screen and (max-width : '+maxwide+')'
+
+$medium-small = $small-medium
+$large-medium = $medium-large
+
+
+
+
+@import 'parts/general.styl'
+
+
+@import 'parts/icons.styl'
+
+
+@import 'parts/header.styl'
+@import 'parts/menu_top.styl'
+// // @import 'parts/menu_left.styl'
+
+@import 'parts/title-bar.styl'
+@import 'parts/search.styl'
+@import 'parts/filters.styl'
+@import 'parts/list.styl'
+@import 'parts/form.styl'
+@import 'parts/reports.styl'
+@import 'parts/detail.styl'
+
+@import 'parts/footer.styl'
+
+// // components
+@import 'comps/menu_float.styl'
+@import 'comps/menu_left.styl'
+@import 'comps/sub_items.styl'
+
+@import 'parts/modal.styl'
+@import 'parts/calendar.styl'
+
+@import 'comps/pager.styl'
+
+
+
+@import 'parts/page_index.styl'
+@import 'parts/page_login.styl'
+
+
+@import 'parts/responsive.styl'
+
+
+@import 'parts/markdown.styl'
+
+@import 'parts/print.styl'
+
+
+// @import 'parts/media_queries.styl'
+// // @import 'parts/maquina.styl'
+
+// @import 'apps/mantenimiento_detalle.styl'
+
+
+@import 'dark.styl'
+
+

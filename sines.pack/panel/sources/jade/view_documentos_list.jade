@@ -1,0 +1,83 @@
+//- ****
+//- Archivo: view_documentos_list.jade
+//- Archivo Transpilado: panel/views/dist/view_documentos_list.php
+//- Author: Sinesss
+//- Tipo: Plantilla de vista PHP
+//- Lenguaje: Pug
+//- Descripción: Este archivo es el template jade de seccion documentos de la pagina de una persona
+//- ****
+//- 
+
+- var id_persona=_GET.id_persona 
+.lines_items.container
+    .px-3.mt-3: .row
+        .col-6: a(class="modal-new-document-link form_people_new_document",
+            data-url="modal.php?page=form_people_new_document&id_person=#{id_persona}") NUEVO DOCUMENTO
+        .col-6.text-right: a(class="",onclick="window.print(); return false;") IMPRIMIR
+
+    each row in lineas
+        - var id_doc=row.id.value
+        .lines_item.row.shadow.p-3.mb-3.mt-1.rounded
+            .col-10: .row
+                .col-6.mt-2: h6 #{row.document_type_id.value}
+                .col-6.mt-2.text-right
+                    span Registrado el #{row.fecha_creacion.value} 
+                    if row.created_by.value!=''
+                        span  por #{row.created_by.value} 
+                .col-6: .row
+                    .col-5.font-weight-bold SEGUIMIENTO
+                    .col-7 #{row.code.value}
+                .col-6: .row
+                    .col-5.font-weight-bold FICHA DE CANCELACIÓN
+                    .col-7 #{row.classifier_a.value}
+                .col-6: .row
+                    .col-5.font-weight-bold TIPO
+                    .col-7 #{row.document_type_value_id.value}
+                .col-6: .row
+                    .col-5.font-weight-bold RESOLUCIÓN
+                    .col-7 #{row.classifier_b.value}
+                .col-6: .row
+                    .col-5.font-weight-bold FECHA DE RECEPCIÓN
+                    .col-7 #{row.document_entry_date.value}
+                .col-6: .row
+                    .col-5.font-weight-bold FECGA DEL EVENTO
+                    .col-7 #{row.event_date.value}
+                .col-6: .row
+                    .col-5.font-weight-bold ESTADO
+                    .col-7
+                        h6: span.badge.badge-primary.text-uppercase(style="background-color:#{row.state_id.color}") #{row.state_id.value}
+                .col-6: .row
+                    .col-5.font-weight-bold BASE SOLICITANTE
+                    .col-7 #{row.id_settlement.value}
+            .col-2.text-right
+                .menudown.d-inline-block 
+                    a.menu_icono_delgado
+                    ul.li_cabecera
+                        li: a(class="i_ec modal-new-document-link form_people_new_document",
+                            data-url="modal.php?page=form_people_new_document&id_person=#{id_persona}&id=#{id_doc}&mode=edit") Editar
+                        li: a(class="i_ec modal-link form_people_status_document",
+                            data-url="modal.php?page=form_people_status_document&id_person=#{id_persona}&id=#{id_doc}&mode=edit") Cambio de estado
+                        li: .menu_limiter
+            .col-12
+                .row.py-4.asignaciones
+                    .col-6: h6 Asignaciones
+                    .col-6.text-right
+                        a(class="modal-link form_new_asigment",
+                            data-url="modal.php?page=form_new_asigment&id_person=#{id_persona}&id_document=#{id_doc}") NUEVA ASIGNACIÓN
+                    if(asigments)
+                        .col-12.px-3: table(class="tabla_standard table table-bordered table-sm table-striped")
+                            thead
+                                tr
+                                    td Registrado el
+                                    td Fecha transacción
+                                    td Monto
+                                    td Operación bancaria
+                                    td Registrado por
+                            tbody
+                                each asigment in row.asigments
+                                    tr
+                                        td.fecha_creacion #{asigment.fecha_creacion}
+                                        td.transaction_date #{asigment.transaction_date}
+                                        td.amount S/.#{asigment.amount}
+                                        td.operation_bank #{asigment.operation_bank}
+                                        td.created_by #{asigment.created_by}

@@ -1,0 +1,183 @@
+//- ****
+//- Archivo: view_import.jade
+//- Archivo Transpilado: panel/views/dist/view_import.php
+//- Author: Sinesss
+//- Tipo: Plantilla de vista PHP
+//- Lenguaje: Pug
+//- Descripción:  Este archivo es el template jade del paso 1, para importar aportaciones desde un archivo excel
+//- ****
+//- 
+
+.container.div_bloque_cuerpo
+	.bloque_titulo#barra_titulo: .titulo: div
+		a.type_file(href="pages.php?page=import2") Importar Aportaciones desde un archivo
+	.alert.alert-primary.mb-0 Importador Versión 2
+
+	//- each val,vari in _GET
+	//- 	div #{vari} : #{val}
+	.form-import
+		if !dataimport
+			form(
+				enctype="multipart/form-data",
+				method="post",
+				action="pages.php?page=#{_GET.page}&step=upload"
+				)
+				.form-group.row
+					label.col-sm-2.col-form-label(for='upload-file') Archivo txt o xlsx
+					.col-sm-5: input#upload-file.form-control-file(type='file',name='file-format')
+				.form-group.row
+					label(for="year-format").col-sm-2.col-form-label Año
+					.col-sm-2: select#year-format.custom-select(name="year")
+						option(selected='') Año
+						each year in years
+							option(value="#{year}") #{year}
+					label(for="month-format").col-sm-2.col-form-label Mes
+					.col-sm-2: select#month-format.custom-select(name="month")
+						option(selected='') Mes
+						each month,index in months
+							option(value="#{index}") #{month}				
+
+				button.btn.btn-primary(type='submit') Enviar
+		else if dataimport.formato=='excel'
+			.card.mb-3.row
+				h5.card-header.nombre Resúmen
+				ul.list-group.p-3
+					li #[span.text-black-50 Fecha:] #{dataimport.ahora}
+					li #[span.text-black-50 Archivo:] #{dataimport.archivo}
+					li #[span.text-black-50 Formato:] #{dataimport.formato}
+					li #[span.text-black-50 Mes:] #{dataimport.month}
+					li #[span.text-black-50 Filas procesadas:] #{dataimport.total}
+					li #[span.text-black-50 Filas Ingresadas regulares:] #{dataimport.primaryshares.total_inserted}
+					li #[span.text-black-50 Filas Ingresadas CAEE:] #{dataimport.secondaryshares.total_inserted}
+					li #[span.text-black-50 Total Ingresadas:] #{dataimport.totales.total_inserted}
+					li #[span.text-black-50 Filas no reconocidas:] #{dataimport.unknown}
+			a.btn.btn-primary.mb-3(href='pages.php?page=import') Volver
+			.card.mb-3.row
+				h5.card-header.nombre#card-inserted Regulares Ingresadas: : #{dataimport.primaryshares.total_inserted}
+				table.table.table-striped
+					thead: tr
+						th(scope='col') #
+						th(scope='col') NÚMERO DE PERSONAL
+						th(scope='col') APELLIDO NOMBRE
+						th(scope='col') CC-NÓMINA
+						th(scope='col') IMPORTE
+					tbody
+						each rowa in inserts.primaryshares
+							tr
+								th(scope='row') #{rowa.fila}
+								td #{rowa.code}
+								td: a(target="_blank",href="custom/people.php?i=#{rowa.people.id}") #{rowa.last_first_name}
+								td #{rowa.nomina}
+								td #{rowa.importe}
+			.card.mb-3.row
+				h5.card-header.nombre#card-inserted CAEE Ingresadas: : #{dataimport.secondaryshares.total_inserted}
+				table.table.table-striped
+					thead: tr
+						th(scope='col') #
+						th(scope='col') NÚMERO DE PERSONAL
+						th(scope='col') APELLIDO NOMBRE
+						th(scope='col') CC-NÓMINA
+						th(scope='col') IMPORTE
+					tbody
+						each rowa in inserts.secondaryshares
+							tr
+								th(scope='row') #{rowa.fila}
+								td #{rowa.code}
+								td: a(target="_blank",href="custom/people.php?i=#{rowa.people.id}") #{rowa.last_first_name}
+								td #{rowa.nomina}
+								td #{rowa.importe}
+			.card.mb-3.row
+				h5.card-header.nombre#card-unknonw Filas no reconocidas: : #{dataimport.unknown}
+				table.table.table-striped
+					thead: tr
+						th(scope='col') #
+						th(scope='col') NÚMERO DE PERSONAL
+						th(scope='col') APELLIDO NOMBRE
+						th(scope='col') CC-NÓMINA
+						th(scope='col') IMPORTE
+					tbody
+						each rowa in unknown
+							tr
+								th(scope='row') #{rowa.fila}
+								td #{rowa.code}
+								td #{rowa.last_first_name}
+								td #{rowa.nomina}
+								td #{rowa.importe}
+		else if dataimport.formato=='text'
+			.card.mb-3.row
+				h5.card-header.nombre Resúmen
+				ul.list-group.p-3
+					li #[span.text-black-50 Fecha:] #{dataimport.ahora}
+					li #[span.text-black-50 Archivo:] #{dataimport.archivo}
+					li #[span.text-black-50 Formato:] #{dataimport.formato}
+					li #[span.text-black-50 Mes:] #{dataimport.month}
+					li #[span.text-black-50 Paginas total:] #{dataimport.total_paginas}
+					li #[span.text-black-50 Filas procesadas:] #{dataimport.total}
+					li #[span.text-black-50 Filas Ingresadas Regulares:] #{dataimport.primaryshares.total_inserted}
+					li #[span.text-black-50 Filas Ingresadas CAEE:] #{dataimport.secondaryshares.total_inserted}
+					li #[span.text-black-50 Total Ingresadas:] #{dataimport.totales.total_inserted}
+					li #[span.text-black-50 Filas no reconocidas:] #{dataimport.unknown}
+			a.btn.btn-primary.mb-3(href='pages.php?page=import') Volver
+			.card.mb-3.row
+				h5.card-header.nombre#card-inserted Regulares Ingresadas: : #{dataimport.primaryshares.total_inserted}
+				table.table.table-striped
+					thead: tr
+						th(scope='col') #
+						th(scope='col') PÁGINA
+						th(scope='col') FECHA
+						th(scope='col') NOMBRE
+						th(scope='col') CÓDIGO
+						th(scope='col') CONCEPTO
+						th(scope='col') IMPORTE
+					tbody
+						each rowa in inserts.primaryshares
+							tr
+								th(scope='row') #{rowa.fila}
+								td #{rowa.props.pagina}
+								td #{rowa.props.fecha}
+								td: a(target="_blank",href="custom/people.php?i=#{rowa.people.id}") #{rowa.nombre}
+								td #{rowa.cod}
+								td #{rowa.props.CONCEPTO}
+								td #{rowa.monto}
+			.card.mb-3.row
+				h5.card-header.nombre#card-inserted CAEE Ingresadas: : #{dataimport.secondaryshares.total_inserted}
+				table.table.table-striped
+					thead: tr
+						th(scope='col') #
+						th(scope='col') PÁGINA
+						th(scope='col') FECHA
+						th(scope='col') NOMBRE
+						th(scope='col') CÓDIGO
+						th(scope='col') CONCEPTO
+						th(scope='col') IMPORTE
+					tbody
+						each rowa in inserts.secondaryshares
+							tr
+								th(scope='row') #{rowa.fila}
+								td #{rowa.props.pagina}
+								td #{rowa.props.fecha}
+								td: a(target="_blank",href="custom/people.php?i=#{rowa.people.id}") #{rowa.nombre}
+								td #{rowa.cod}
+								td #{rowa.props.CONCEPTO}
+								td #{rowa.monto}
+			.card.mb-3.row
+				h5.card-header.nombre#card-unknonw Filas no reconocidas: : #{dataimport.unknown}
+				table.table.table-striped
+					thead: tr
+						th(scope='col') #
+						th(scope='col') PÁGINA
+						th(scope='col') FECHA
+						th(scope='col') NOMBRE
+						th(scope='col') CÓDIGO
+						th(scope='col') CONCEPTO
+						th(scope='col') IMPORTE
+					tbody
+						each rowa in unknown
+							tr
+								th(scope='row') #{rowa.fila}
+								td #{rowa.props.pagina}
+								td #{rowa.props.fecha}
+								td #{rowa.nombre}
+								td #{rowa.cod}
+								td #{rowa.props.CONCEPTO}
+								td #{rowa.monto}

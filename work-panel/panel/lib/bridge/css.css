@@ -1,0 +1,356 @@
+/************************************************/
+/****************** RESET ***********************/
+/************************************************/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,th,var,optgroup{font-weight:inherit;}del,ins{text-decoration:none;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:baseline;}sub{vertical-align:baseline;}legend{color:#000;}input,button,textarea,select,optgroup,option{/*font-family:inherit;*/font-size:inherit;font-style:inherit;font-weight:inherit;}input,button,textarea,select{*font-size:100%;}
+/*p,blockquote{margin:0;padding:0;}*/
+/*strong{font-style:inherit;font-weight:inherit;}*/
+p{margin:0px 0 10px 0;padding:0}
+
+/************************************************/
+/****************** LAYOUT **********************/
+/************************************************/
+/*GENERAL*/
+	body {
+		font-family:				Arial;
+		font-size:					11px;
+		color: 						#000;
+		width:						100%;
+		margin-left:				auto;
+		margin-right:				auto;
+		text-align: 				center;
+		margin-top:					0px;
+		margin-bottom:				5px;
+	}
+	form { margin:0px;	padding:0px; }
+	input,select { padding:2px 0px; font-size:13px;}
+	address { display:inline; }
+
+/*layaout*/
+	#div_allcontent {
+		margin-left:auto;
+		margin-right:auto;
+		text-align:center; 
+		position:relative;
+		z-index:0;
+	}
+	.contenido_principal {
+		float:left;
+		padding:0px;
+		height:auto;
+		position:relative;
+		z-index:1;
+		text-align:left;
+		overflow:hidden;
+		background: none;
+		width:100%;
+		margin:10px 0px 0;
+		padding-left:5px;
+		padding-right:5px;
+	}
+	#contenido_margen {
+		margin:0 35px;
+	}	
+	#div_contenedor {
+		width:100%;
+		background-color:transparent;
+		height:auto;
+		margin-left:auto;
+		margin-right:auto;
+		text-align:left;
+		float:left; 
+		position:relative; 
+	}
+
+/************************************************/
+/******************* LIBS ***********************/
+/************************************************/
+
+/*clean*/
+	.clean, .clear { float:none;clear:both; font-size:1px; height:0px; }
+	
+/*sombras*/
+	.div_sombra_left, .div_sombra_right { position:absolute; width:5px; height:286px; }
+	.div_sombra_left {  background:url(../css/sombras/barra-left.png); left:-5px;  }
+	.div_sombra_right { background:url(../css/sombras/barra-right.png); right:-5px;  }
+	
+/*cuadros*/
+	.cuadro { position:relative; height:auto;	background-repeat:repeat-y; overflow:hidden;}	
+	.cuadro .arriba_izquierda{position:absolute; left:0px; top:0px; background-repeat:no-repeat; overflow:hidden; z-index:1; }
+	.cuadro .arriba_derecha{position:absolute; right:0px !important; right:-1px; top:0px; background-repeat:repeat-x; overflow:hidden; z-index:1;}
+	.cuadro .barra_abajo{position:absolute; left:0px; bottom:0px !important; bottom:-1px; width:100%; height:auto; background-repeat:repeat-x; overflow:hidden; z-index:0;}
+	.cuadro .abajo_izquierda{position:absolute; left:0px; bottom:0px !important; bottom:-1px; background-repeat:repeat-x; overflow:hidden; z-index:1; }
+	.cuadro .abajo_derecha {position:absolute; right:0px !important; right:-1px; bottom:0px !important; bottom:-1px; background-repeat:repeat-x; overflow:hidden;z-index:1; }
+/*filas*/
+	.div_fila {
+	clear:both; float:left !important; float:none; width:100%; height:auto; position:relative; overflow:hidden; 
+	}
+	.div_fila_margen {
+	margin-bottom:10px;
+	}
+	.div_fila_overflow { 
+	clear:both; float:left !important; float:none; width:100%; height:auto; position:relative; overflow:visible;
+	}
+/*columnas*/	
+	.div_columna {
+	float:left; height:auto; position:relative; clear:none; min-height:1px;
+	}
+/*canvas*/
+	.div_canvas {
+	height:auto !important; height:500px; min-height:500px;	padding:0px;
+	background:none;
+	border:none;
+	border-top:0px;
+	clear:left;
+	float:none;
+	position:relative;
+	}	
+/*main*/
+	.div_main {
+	height:auto !important; height:250px; min-height:250px;	padding:0px;
+	background:none;
+	border-top:0px;
+	width:753px;
+	}	
+/*left*/	
+	.div_absoluto {
+	position:absolute; background-color:transparent; background-repeat:no-repeat; background-position:0px 0px;
+	}
+/*left*/
+	.div_left {
+	background-color:none;	
+	height:auto !important; height:250px; min-height:250px;	padding:0px;
+	width:205px; 
+	}
+/*right*/
+	.div_right {
+	height:auto !important; height:250px; min-height:250px;	padding:0px;
+	width:215px;
+	}	
+/*margenes*/	
+	.margen_arr { margin-top:10px; }
+	.margen_aba { margin-bottom:10px; }
+	.margen_izq { margin-left:10px !important; margin-left:6px; }
+	.margen_der { margin-right:10px !important; margin-right:7px; }
+/*barra*/	
+	.div_barra { 
+	background:#none; height:auto; padding:4px 10px 4px 10px; clear:left; position:relative; z-index:0; text-align:left;
+	}
+/*status*/
+	.div_status {
+	clear:both; height:auto; position:relative; padding:10px; border:1px solid #FF0000; margin-bottom:10px;  
+	}
+/*lineas*/
+	.div_linea {
+	clear:both; float:left; width:100%; height:auto; position:relative; padding:10px 0; font-size:1px; 
+	}
+/*bloque*/	
+	.div_bloque { height:auto; float:left; height:auto !important; height:150px; min-height:150px; }
+/*inner*/
+	.div_inner { padding:10px 4%; }
+	
+/*mensajes*/	
+.mensaje_info, .mensaje_exito, .mensaje_alerta, .mensaje_error {   
+       font-family:Arial; font-size:13px; border: 1px solid;   
+       margin: 6% 5%; padding:15px 10px 15px 50px; background-repeat: no-repeat; background-position: 10px center;  
+	   color: #000; background-color: #FFF;  
+}   
+.mensaje_info {   
+       background-image: url(../img/common/info.png);   
+}   
+.mensaje_exito {   
+       background-image: url(../img/common/exito.png);   
+}   
+.mensaje_alerta {   
+       background-image: url(../img/common/alerta.png);   
+}   
+.mensaje_error {   
+       background-image: url(../img/common/error.png);   
+}   
+
+/*icos*/
+.ico { padding-left:28px; float:left; width:auto; height:20px; background-repeat:no-repeat; margin-left:15px; padding-top:4px; }
+.foto-formulario div { text-align:center; margin:20px 0; } 
+.foto-formulario div b{
+font-weight:bold;
+text-transform:uppercase;
+}
+
+
+/*BLOQUES*/
+
+	/*slider*/
+		.contenedor_slider_fijo { position:relative; overflow:hidden; }
+		.contenedor_slider_movil { position:absolute }
+		.contenedor_slider_movil div.slid { float:left; height:auto; text-align:inherit; }
+		.contenedor_slider_movil div.slid li { clear:none !important; float:left; position:relative; overflow:hidden; }
+		a.but_prev, a.but_next { position:absolute; bottom: 0px; padding:5px 10px; cursor:pointer; background-color:transparent; }  
+		a.but_prev { left:0px; }
+		a.but_next { right:0px; text-align:right; }
+		/*
+		.bloque_pie .but_handle { position:relatives; float:left; padding:2px 10px; font-weight:bold; margin:0px 3px !important; cursor:pointer; text-decoration:none !important; }  
+		/*.bloque_pie { position:absolute; bottom:0px; }*/
+		/*
+		.bloque_pie .but_handle { background-color:#000 !important; color:#FFF !important; }
+		.bloque_pie .but_handle:hover,
+		.bloque_pie .selected { background-color:#FF9 !important; color:#000 !important; }		
+		*/
+	
+/*MENU*/
+			
+	/*contenedor*/
+		.div_menu {
+		background-position:0px 0px; background-repeat:repeat-x; border:0;
+		}
+	/*lados_flotante_externos*/	
+		.div_menu .div_menu_float_izq,
+		.div_menu .div_menu_float_der { 
+		float:left;
+		background-position:left 0px; background-repeat:no-repeat;
+		}
+	/*lados_externos*/	
+		.div_menu .div_menu_izq { 
+		position:absolute; left:0px; top:0px;
+		background-position:left 0px; background-repeat:no-repeat;
+		}
+		.div_menu .div_menu_der { 
+		position:absolute; right:0px; top:0px;	
+		background-position:right0px; background-repeat:no-repeat;
+		}	
+	/*elementos ul li*/
+		.div_menu ul { 
+		list-style:none; padding:0; margin:0;
+		}
+		.div_menu ul .div_menu_float_izq,
+		.div_menu ul .div_menu_float_der,
+		.div_menu ul li { 
+		border:0;
+		text-align:center; height:auto; float:left;
+		padding:0;
+		position:relative;
+		margin:0;
+		}	
+		
+		
+		/*lados_internos y selected*/	
+		
+			.div_menu ul li.ultimo { 
+			/*margin:0;*/
+			}
+			.div_menu ul li a {
+			height:auto;float:left; position:relative;
+			}
+		
+			.div_menu ul li .menu_izq, .div_menu ul li .menu_der, .div_menu ul li .menu_borde {
+			position:absolute; top:0px;display:block;	background-repeat:no-repeat;
+			}
+			.div_menu ul li { background-position:0px 0px; background-repeat:repeat-x; }
+				.div_menu ul li .menu_izq { left:0px; background-position:left top; }
+				.div_menu ul li .menu_der { right:0px !important; right:-1px; background-position:right top; }		
+								
+				.div_menu ul li .menu_borde { right:0px !important; right:-1px; background-position:right top; }
+				
+
+
+/*FORMULARIOS*/	
+.formularios .mensaje {
+
+}
+.formularios legend { 
+font-weight:bold;
+padding:15px 0 20px 0;
+}
+.formularios .camps {
+margin:0px 0 10px; clear:left; float:left;
+}
+.formularios .camps label.name {
+color:#343434;
+float: left;
+text-align: right; 
+margin-right: 10px; /*default*/
+display: block;
+width:95px; /*default*/
+font-size:12px; /*default*/
+}
+.formularios .camps input.caja, 
+.formularios .camps textarea.caja {
+border: 1px solid #333;
+width:115px; /*default*/
+font-size:12px; padding:1px 1px; color:#000;	
+} 
+.formularios .camps textarea.caja {
+height:100px;
+}
+.formularios .submit input { 
+padding:1px 20px; font-size:12px;
+}	
+
+/*upload*/
+.upload_tabla { float:left; margin-right:10px; }
+.upload_tabla td { width:103px; height:80px; display:block; overflow:hidden; background-color:#FFFFFF; }
+.upload_copiando { background:transparent url(../img/common/load.gif) no-repeat 0 0; width:16px; height:11px; float:left; margin:5px 10px 0 0;  }
+.upload_controles { float:left; margin-right:10px; }
+.upload_img_cerrar { margin-right:10px; text-decoration:underline; }
+.upload_error { text-align:left; }
+
+
+
+
+
+/*BORDER*/
+.bors { background-color:#000; color:#000; overflow:hidden; padding:0;position:absolute; font-family:calibri;}
+.bor-1 { left:0px; top:0px; }
+.bor-2 { right:0px; top:0px; }
+.bor-3 { left:0px; bottom:0px; }
+.bor-4 { right:0px; bottom:0px; }
+/*
+.bor-1, .bor-2, .bor-3, .bor-4 { height:10px; width:10px; }
+.bors { font-size:50px; }
+.bor-1 b { float:left; margin:-23px 0 0 -4px }
+.bor-2 b { float:left; margin:-23px 0 0 -11px }
+.bor-3 b { float:left; margin:-31px 0 0 -4px }
+.bor-4 b { float:left; margin:-31px 0 0 -11px }
+*/
+/*
+.bor-1, .bor-2, .bor-3, .bor-4 { height:12px; width:12px; }
+.bors { font-size:60px; }
+.bor-1 b { float:left; margin:-26px 0 0 -4px }
+.bor-2 b { float:left; margin:-26px 0 0 -11px }
+.bor-3 b { float:left; margin:-31px 0 0 -4px }
+.bor-4 b { float:left; margin:-31px 0 0 -11px }
+*/
+.bor-1, .bor-2, .bor-3, .bor-4 { height:8px; width:8px; }
+.bors { font-size:40px; }
+.bor-1 b { float:left; margin:-19px 0 0 -3px; }
+.bor-2 b { float:left; margin:-19px 0 0 -9px; }
+.bor-3 b { float:left; margin:-25px 0 0 -3px; }
+.bor-4 b { float:left; margin:-25px 0 0 -9px; }
+
+/*DATA*/
+
+/*DATA*/
+
+.data { padding:0px 60px 60px; margin-top:0px; }
+.data .line { float:left; color:#333; clear:left; padding:0 0 10px; width:100%; height:auto;  }
+.data .line .var   { float:left; text-transform:uppercase; font-size:14px; width:20%;  padding:0; }
+.data .line .valor { float:left; color:#000; font-size:14px; width:100%; padding:0; }
+
+
+/*AREA TAB*/
+.area_tab  { display:none; clear:both; }
+
+/**/
+.barra_abajo .bloque_pie { right:0px; }
+
+.main_title { position:absolute; margin-left:-1000px; }
+
+.sub_forms { display:none; }
+
+/*PRIN*/
+
+div.prin { float:left;width:100%; } 
+div.prin pre { z-index:1;border-radius:3px;margin-bottom:1px;padding:2px 5px;float:left;text-align:left; position:relative;background-color:#333 !important;color:#FFFFFF !important;font-size:9px; }
+
+
+
+/*.arbol_items .menu_group { display: none; }*/
+/*.arbol_items .selected {	 display: block; }*/

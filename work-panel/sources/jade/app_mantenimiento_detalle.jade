@@ -1,0 +1,95 @@
+.marco
+    //- CREACION
+    .ficha_datos.wide
+        .linea 
+            b.var.black CREADO
+            span.val #{linea.creacion} 
+            span.paren (#{linea.cuando_creo})
+        .linea_bar
+    .ficha_datos.wide
+        .ficha_datos.half
+            //- FECHAS
+            .linea 
+                b.var INICIO
+                span.val #{linea.inicio} 
+                span.paren (#{linea.cuando_inicia})
+            .linea
+                b.var FIN
+                span.val #{linea.fin} 
+                span.paren (#{linea.duracion} después)
+            .linea_bar
+            //- DATOS
+            .linea
+                b.var Empresa
+                span.val #{linea.nombre_empresa}
+            .linea
+                b.var Planta
+                span.val #{linea.nombre_planta}
+            .linea
+                b.var Area
+                span.val #{linea.nombre_area}
+            .linea
+                b.var Subarea
+                span.val #{linea.nombre_subarea}
+            .linea
+                b.var Categoría
+                span.val #{linea.nombre_categoria}
+            .linea
+                b.var Subcategoría
+                span.val #{linea.nombre_subcategoria}
+            .linea
+                b.var Equipo
+                span.val #{linea.nombre_equipo}                
+        .ficha_datos.half
+            .linea
+                //- ESTADOS
+                ul.listas.estados
+                    li.var Estado
+                    each item, index in linea.estados_opciones
+                        if (index==linea.estado)
+                            li.selected #{item}
+                        else
+                            li #{item}
+    //- ACTIVIDADES
+    .ficha_datos.wide.actividades
+        .linea_bar
+        .linea: h4 #{linea.actividades_num} Actividades
+        each item in actividades
+            .ficha_datos.half.datos
+                .linea
+                    b.var ACTIVIDAD
+                    span.val: strong #{item.actividades_tipos.nombre}
+                //- FECHAS
+                .linea 
+                    b.var INICIO
+                    span.val #{item.inicio} 
+                    span.paren (#{item.cuando_inicia})
+                .linea
+                    b.var FIN
+                    span.val #{item.fin} 
+                    span.paren (#{item.duracion} después)
+            .ficha_datos.half        
+                .linea 
+                    ul
+                        li.linea
+                            ul.listas
+                                li.var herramientas
+                                each ite in item.herramientas
+                                    li #{ite.nombre}
+                        li.linea
+                            ul.listas
+                                li.var técnicos
+                                each ite in item.tecnicos
+                                    li #{ite.nombre} #{ite.apellidos}
+                        li.linea
+                            ul.listas
+                                li.var materiales
+                                each ite in item.materiales
+                                    li #{ite.nombre}
+
+    //- EVENTOS
+    .ficha_datos.wide
+        .linea_bar
+        .linea 
+            b.var Eventos            
+        

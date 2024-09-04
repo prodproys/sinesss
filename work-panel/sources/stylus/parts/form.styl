@@ -1,0 +1,546 @@
+//
+
+/**
+ * FORMULARIO
+ */
+
+
+.formulario 
+	.btn
+		margin-right 1em
+	// background white
+	.greyy
+		color #b9b9b9
+	height auto
+	display block
+	padding 20px
+	margin-bottom 10px
+	li.linea_form
+		&:hover
+			.greyyafter
+				.html
+					display block
+		.greyyafter
+			display inline-block
+			.text
+				display inline-block
+				padding-left 0
+				font-weight bold
+				&:before
+					content "\e6ac"
+					font-family icomoon
+					float left
+					color #FF9800
+					padding-left 1em
+					width 17px
+			.html
+				display none
+				position absolute
+				width 700px
+				background #fefef3
+				border 1px solid #FF9800
+				z-index 1
+				padding 1em
+				margin-left 1em
+				margin-bottom 1px
+				border-radius .5em
+				box-shadow 0 18px 32px rgba(0,0,0,0.4)
+				ul
+					li
+						margin-bottom .6em
+						text-align justify
+
+	#error_creacion
+		padding 5px 0; 
+		font-size 12px;
+		display inline-block
+		span
+			color color_2
+				b
+					color black
+	.upl
+		display inline-block
+		position relative
+		.elim
+			position absolute
+			right 7px
+			top 12px
+			&:before
+				content "\e681"
+				color red
+				font-family icomoon
+				font-size 7px
+	.enviar
+		float right
+		&:before
+			font-family 'icomoon'
+			content "\f0da"
+	.bootones
+		float left
+		margin-right 10px
+		max-height 400px
+		overflow auto
+		width 15%
+		li
+			margin-bottom 5px
+			a
+				text-align left
+				text-transform uppercase
+				width auto
+			& + textarea
+				display none    
+			&.insert  
+				font-weight bold
+				text-align center
+				font-family Helvetica
+				color #777
+				margin-top 34px
+				&after
+					font-family 'icomoon'
+					content "\f0da"
+					font-size 16px
+					line-height 100%
+					vertical-align sub
+					margin-left 3px
+	.bootones + div       
+		float left     
+		width 83%    
+	.floatinput
+		display inline-block    
+	.linea_form
+		margin-bottom 0.5em
+		height auto
+		// overflow hidden
+		clear left
+		float none
+		display flex
+		align-items center
+	#linea_crear
+		padding-top 5px
+	.linea_derecha
+		float left
+		width auto
+		clear none
+		@media $large
+			padding-left 10px
+	.linea_derecha_espacio
+		float left
+		width auto
+		clear none
+		margin-right 20px
+	.linea_derecha label,
+	.linea_derecha_espacio label,
+		width auto
+		// margin-right 10px
+		.form_input
+			width auto
+	.linea_derecha i,
+	.linea_derecha_espacio i,
+	.linea_derecha_inicio i
+			width auto
+			vertical-align top
+			margin-right 3px
+			margin-left 3px
+	.linea_derecha_inicio
+		float left
+		width auto
+	.linea_derecha_50,
+	.linea_derecha_100,
+	.linea_derecha_150
+		float left
+		width auto
+		clear none
+		margin-right 20px
+		label
+			margin-right 10px
+	.linea_derecha_50 
+		label
+			width 50px
+	.linea_derecha_100 
+		label
+			width 100px
+	.linea_derecha_150 
+		label
+			width 150px
+	.linea_derecha_align,
+	.linea_derecha_align_inicio,
+	.linea_derecha_align_espacio
+		position relative
+		padding-top 20px
+		float left
+		width auto
+		clear none
+		margin-right 5px
+		overflow visible
+		label
+			position absolute
+			top 0px
+			width auto
+			height auto
+			padding-left 0px
+			font-size 11px
+			white-space nowrap
+		.form_input
+			margin-left 0px
+	.linea_derecha_align_inicio
+		padding-left 118px
+		clear left
+	.linea_derecha_align_espacio
+		margin-right 20px
+	.in_span
+		height auto
+		display inline-block
+		float none
+		span
+			max-width 600px
+			overflow hidden
+			white-space pre-wrap
+			height auto
+			background #F9F9F9
+			font-size 1.2em
+	.form_input
+		border 1px solid #BDC7D8
+		color #333
+		width 175px
+	textarea.form_input
+		min-width 580px
+	select.form_input
+		width auto
+		min-height 19px
+	// input.form_input
+	// 	height 20px
+	textarea.form_input
+		height 100px
+	.form_input 
+		input,
+		select
+			height 18px
+		input[type="radio"]
+			margin-right 4px
+			margin-left 4px
+			
+	select.form_input_fecha
+		width auto
+		margin-right 0px
+	label
+		clear left
+		display inline-block
+		width 150px
+		// padding-left 20px
+		// font-weight bold
+		position relative
+		// font-size .9em`
+		// color color_2
+		// letter-spacing -0.06em
+		vertical-align top
+		overflow hidden
+		text-transform uppercase
+		// font-family sans-serif
+		// font-weight 700
+		// font-size 1em
+		text-align left
+		// color red
+		&.vali:after
+			content '*'
+			// color black
+			top 3px
+			right -5px
+			position relative
+			font-size 1.4em
+	.obj
+		display inline-block
+		margin-left 30px
+		margin-bottom 10px
+		li
+			font-size 1.1em
+			font-weight normal
+			border 1px solid #bdc7d8
+			margin-top -1px
+			padding 6px 30px
+		// font-family PTN57F !important
+
+a.edot
+	color #F00 !important
+	font-size 30px
+	left -7px
+	position absolute
+	top -11px
+	text-decoration none
+	&:hover
+		text-decoration none !important
+
+.formulario label a.edot
+	left 12px
+	padding 0 3px
+	position absolute
+	text-decoration none
+	top -1px
+	cursor pointer
+	font-size 11px
+
+.legend
+	background #F5F5F5
+	color #444
+	font-size 1.5em
+	font-weight bold
+	margin 20px 0 20px 0px !important
+	padding 6px 0 6px 19px
+	text-align left
+	float left
+
+.floatinput
+	position relative
+
+
+.boton_right
+	float right
+	font-size 0.9em
+	margin-left 10px
+	text-decoration underline
+	margin-right 10px
+
+
+a.crearforeig
+	float right
+	margin 2px 0 0 2px
+	&:before
+		content "\e685"
+		margin 0 0 0 4px
+		font-size 10px
+
+#bloque_content_crear
+	margin-top 5px
+
+
+.multisele
+	display inline-block
+	width auto 
+	height auto 
+	margin-left 3px
+	margin-bottom 1em
+	input
+		margin-right .4em
+		margin-top 0
+	label
+		width auto
+		color black 
+		padding-left 0  
+
+
+/*FIX BOOTSTRAP*/
+select
+	width auto
+
+select, 
+input[type="file"]
+	line-height auto
+
+.nc input[type="radio"],
+.nc input[type="checkbox"],
+input[type="radio"].chk,
+input[type="checkbox"].chk
+	line-height normal
+	margin 0
+
+
+select, 
+textarea,
+input[type="text"], 
+input[type="password"], 
+input[type="datetime"],
+input[type="datetime-local"], 
+input[type="date"], 
+input[type="month"],
+input[type="time"], 
+input[type="week"], 
+input[type="number"],
+input[type="email"], 
+input[type="url"], 
+input[type="search"],
+input[type="tel"], 
+input[type="color"], 
+.uneditable-input
+	margin-bottom 2px;
+
+label
+	display block
+	margin-bottom 1px
+
+form
+	margin 0px
+	padding 0px
+
+.form_boton_1
+	border 0
+	-moz-border-radius 7px
+	-webkit-border-radius 7px
+	-ms-border-radius 7px
+	-khtml-border-radius 7px
+	border-radius 7px
+	font-size 13px
+	font-weight bold
+	height auto
+	padding 4px 16px
+	text-align center
+	text-transform uppercase
+	background linear-gradient('to top', #4B8CF7, #222)  
+	color #FFFFFF
+	margin-right 10px
+
+
+.cr_pl
+	min-height 25px
+	bottom 0px
+	clear left
+	float right
+	// position absolute
+	padding 0 5px
+	right 7px
+	text-align right
+	background-color #EDEFF4
+	border-left 1px solid #D2D9E7
+	border-bottom 1px solid #D2D9E7
+	border-radius 0px 0px 4px 4px
+	label
+		display inline-block
+		font-weight bold
+		margin-right 10px
+	a
+		font-size 1em !important
+		height 23px
+
+.multicombo
+	float left
+	max-width 750px
+	padding-top 5px
+	.fil
+		float left
+		width 150px
+		height 16px
+		overflow hidden
+	.fil label
+		float none
+		padding 0
+		margin-left 3px
+		font-weight normal
+		font-size 11px
+		font-style normal
+
+.tbltt
+	td
+		font-size 10px
+		padding-right 2px
+		padding-left 2px
+	.label
+		font-weight bold
+		text-transform uppercase
+	.resaltar
+		color red
+	.value
+		min-width 20px
+		background-color color_1
+		outline 1px solid #FFF
+		color #000
+
+.titulo_formulario
+	margin 10px 0px 30px
+	font-size 2.5em
+	font-weight bold
+	padding-left 0px
+
+
+.linea_hijo
+	height auto
+	label
+		text-transform capitalize
+
+	div
+		height auto
+		width 680px
+		margin-top 6px
+		display inline-block
+
+	div iframe
+		width 100%
+		height 350px
+		width 680px
+
+
+
+
+.upload_controles1
+	padding-top 26px
+	font-size 11px
+	color #000000
+	margin-right -5px
+
+.upload_input_file
+	width 230px
+	margin-top 2px
+	clear left
+	color transparent
+	line-height 10px !important
+
+.upload_table1
+	margin-right 7px
+	float left
+	width 93px
+	height 103px
+	border 1px solid #cccccc
+	background-color #FFFFFF
+
+.upload_error
+	height 30px
+	padding 0px 7px
+	color #FF0000
+	font-size 12px
+
+.upload_table2
+	padding 0px
+	vertical-align middle
+
+.upload_img_default
+	display block
+	margin auto
+	width 99%
+
+.upload_copiando
+	margin-right 7px
+	float left
+	text-align center
+	border 1px solid #000000
+	vertical-align middle
+	width 103px
+	height 103px
+	background-color #FFFFFF
+
+.upload_preview
+	font-size 11px
+	display block
+	margin-top 12px
+
+.upload_img_cerrar
+	cursor pointer
+
+
+.oculto
+	display none !important
+
+input[type=text],select
+	&.form_input
+		// border 1px solid #fff !important
+		box-sizing border-box	
+		// font-size 16px	
+textarea
+	&.form_input
+		// border 1px solid #fff !important
+		height 80px
+		box-sizing border-box	
+
+.form_input
+	input[type=checkbox]
+		// border 1px solid white
+		height auto !important
+
+
+

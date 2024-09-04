@@ -1,0 +1,24 @@
+//- ****
+//- Archivo: view_people_evolution_list.jade
+//- Archivo Transpilado: panel/views/dist/view_people_evolution_list.php
+//- Autor: Sinesss
+//- Tipo: Plantilla de vista PHP
+//- Lenguaje: Pug
+//- Descripción:  Este archivo es el template jade de la seccion de evolucion, del reporte en pagina de personas
+//- ****
+//- 
+
+.controls-rows
+    .sub-controls
+        each control in controls
+            != control
+.table-responsive
+    table.table.table-bordered.table-sm.table-striped
+        thead
+            each row in labels
+                th(scope='col') #{row.label}
+        tbody
+            each row in items
+                tr
+                    each cell in row
+                        td #{cell.text}

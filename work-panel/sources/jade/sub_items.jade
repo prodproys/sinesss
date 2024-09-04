@@ -1,0 +1,12 @@
+table.table.table-bordered.itms_cont.sub_items
+    thead.thead-light: tr
+        each item in head_
+            th(style="width:#{item.width};")!= item.label
+    tbody
+        each line in lines_
+            tr
+                each item in line
+                    td!= item
+    tr
+        each item in bottom_
+            td!= item

@@ -1,0 +1,30 @@
+
+vendor_fix(prop, args, only = null, ignore = null, vendor-property = true)
+  need_normalize = !vendor-property or prop in ('transition' 'transition-property' 'border-image' 'border-image-slice')
+  for prefix in vendor-prefixes
+    unless (only and !(prefix in only)) or (ignore and prefix in ignore)
+      if official == prefix
+        if need_normalize
+          {prop}: normalize(prop,('%s' % args))
+        else
+          {prop}: args
+      else
+        newprop = prop
+        newprop = '-' + prefix + '-' + prop if vendor-property
+
+        if need_normalize
+          {newprop}: normalize(prop,('%s' % args),prefix)
+        else
+          {newprop}: args        
+
+background()
+  if match('-gradient\(', ''+arguments)
+    vendor_fix('background', arguments, vendor-property: false)
+  else
+    background arguments
+
+background-image()
+  if match('-gradient\(', ''+arguments)
+    vendor_fix('background-image', arguments, vendor-property: false)
+  else 
+    background-image arguments

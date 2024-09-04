@@ -1,0 +1,266 @@
+
+
+
+color_0=#000 // color negro general
+color_1=rgba(#E1ECED,0.5) // bg barra principal
+
+// color_1=rgba(#5ab4e6,0.1) // bg barra principal
+
+color_2=#cdb000 // color secundario // el naranja
+// color_2=#FA4B2A;
+color_3=#71a2b6 // color de links // el azul
+// color_3=#136CB2 // color de links // el azul
+color_4=#283442   // color de bg menú
+color_5=#f5f6f7 // #fea100 // color de letra de menú // el blanco
+// color_6=#fefef5
+color_6=#fff5dd // #fea100 // color amarillo de resaltado
+
+$verde=#89BC58;
+
+
+
+component_link_color=#71a2b6
+component_color=#f5f6f7
+component_bg=#141820
+component_color_active=#000
+component_bg_active=#f0f6f6
+
+.link_light_mode
+    display none
+.link_dark_mode
+    display block
+
+
+body.dark
+    background-color #121212 !important
+    background linear-gradient(to bottom,#121212 20%,black) !important
+    color #ebebeb !important
+    .link_light_mode
+        display block
+    .link_dark_mode
+        display none
+    a
+        color #7ddfee
+        &:hover
+            color color_2
+            text-decoration underline
+    .card
+        color black !important
+    #div_allcontent
+        background transparent
+    .bloque_titulo 
+        background rgba(225,236,237,.1)
+        .titulo
+            color white !important
+        .titulo
+            .type_file.type-main
+                color #f64541
+            .type_file:last-child
+                color white
+            .pipe
+                padding 0 3px
+    .bl
+        &.bl:nth-child(odd)
+            background-color #212836 !important
+        &.bl:nth-child(even)
+            background-color #141820 !important
+        &.modificador_grilla
+            @media $large
+                &:hover .ldd .bld .bd
+                    background-color #313737 !important
+            .ldd 
+                .bld
+                    border-left 1px solid #333 !important
+        .bd.fmf
+            font-weight 700
+            // background-image linear-gradient(to right,#fff 30%,#19b0c2)
+            // background-clip text
+            // -webkit-text-fill-color transparent
+            // color #f64541
+    .bl.modificador_grilla
+        &:first-child 
+            .nc
+                color white !important
+
+
+    .bl
+        border-bottom 1px solid transparent !important
+        box-shadow 0px 1px 2px rgba(white,.4) !important
+        &.modificador .ldd .bld .nc
+            color #7f89a5 !important
+    #ordenable .bl.modificador
+        border none !important
+        box-shadow initial !important
+        .ldd .bld
+            border-bottom-color transparent !important
+
+
+    .menudown
+        // background-color component_bg
+        .li_cabecera
+            background-color component_bg !important
+            .menu_limiter
+                border-bottom-color #50545f
+            a
+                color #f2f2f4 !important
+                // border-bottom 1px solid #50545f
+            span
+                color component_color !important
+            box-shadow 0 14px 28px rgba(0,0,0,0.25), 0 20px 20px rgba(0,0,0,0.22);
+            border-color #50545f
+            > li, > a
+                &:nth-child(even),&:nth-child(odd)
+                    background-color transparent
+                &:hover
+                    background-color #313737
+        &:hover
+            > a
+                color color_2
+
+                    
+    .ul_menus
+        background-color #353c48
+        a
+            color component_link_color
+        li.group
+            label.padre
+                border-bottom 1px solid #000
+                &:hover
+                    background-color darken(color_4,30)
+            .mcontent
+                ul
+                    li
+                        border-bottom-color transparent  
+                        &.selected,&:hover
+                            background-color #313737
+                            border-bottom-color transparent  
+                            a
+                                color color_2 !important   
+                        &.seccion a
+                            color #75809a !important
+
+    ul.pagination,ul.pagination-sm
+        background-color component_bg
+        > li
+            > a
+                border 1px solid #313737
+            &.active,&:hover
+                a
+                    background-color #000
+                    color color_2 !important
+            &:first-child,&:last-child 
+                a
+                    color transparent !important
+                    &:before
+                        color color_2 !important
+        > li.page-item
+            background inherit
+            border-color transparent
+            > .page-link
+                background inherit
+                border-color transparent
+                color #71a2b6
+                   
+    #inner_span_num
+        .spa2n
+            color color_2
+
+
+    table.sub_items
+        background-color component_bg
+        color component_color
+
+    .bld a.mn
+        color color_2 !important
+    // .formulario label
+    //     color #a58664
+
+    &.modulo_login
+        #div_allcontent
+            border 0
+    &.detail
+        .bl .bld .nc
+            color #7f89a5 !important
+
+
+    .bloque_content_crear
+        color white
+        background-color inherit
+        box-shadow initial
+    .formulario
+        label
+            color #75809a
+            font-weight bold
+        .form_input
+            background-color #141820
+            border-color rgba(#75809a,.2)
+            color #7e89a5
+        .form_input[disabled]
+            color #374660
+            background-color transparent
+            background-color #141820
+    // 02629e
+    .btn
+        background #fff
+        border 1px solid black
+    .btn-primary
+        background #02629e
+        border 1px solid #02629e
+    .btn-inverse
+        background #000
+    .filters
+        select
+            background-color #141820
+            border-color @background-color
+            color #69738a
+            color white
+            &.inuse
+                border 1px solid #cdb000 !important
+                background: transparent !important
+                color white !important
+
+    
+    #inner_after
+        background linear-gradient(to bottom,#212836 1%,#212835) !important
+
+	
+    .nav.menu_detail
+        border-bottom 1px solid #363d48
+        li a
+            margin-right .5em
+            // color white
+            &.active,&:hover
+                color white
+                background #212836
+                border-color #363d48 #363d48 @background #363d48
+    #new_refreshing
+        background rgba(black,.6)
+    table
+        background #212836
+        color #7f89a5
+        thead th
+            color white
+            background #373d4a
+        &.table-bordered td, &.table-bordered th
+            border-color #111111
+        &.table-striped tbody tr:nth-of-type(odd)
+            background black
+
+    #ordenable 
+        .bl.modificador.line-red
+            border-left 5px solid #c00c0c !important
+    #modal-container
+        .controModal
+            .modal-dialog
+                .modal-content
+                    background #212836 !important
+                    border 1px solid #333
+                    .modal-header
+                        border-bottom-color #333
+                    .modal-footer
+                        border-top-color #333
+                    .btn-secondary
+                        background-color #333
+
+    .ma-container
+        color black

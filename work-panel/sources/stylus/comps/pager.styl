@@ -1,0 +1,67 @@
+
+#barra_paginacion
+    flex-grow 1
+    padding 0 1em
+ul.pagination,ul.pagination-sm
+    background-color component_bg
+    margin 0
+    display flex
+    > li
+        > a
+            padding .5rem .75rem
+            line-height 1.25
+            // border 1px solid #dee2e6
+            margin-left -1px
+            display block
+            color #004b91
+            // background #fff
+        &.disabled,
+        &.active
+            > a
+                pointer-events none
+                color #6c757d
+        &.active.page-item > a
+            background #004b91
+            border-color @background                
+        &.active,
+        &:hover
+            > a
+                // color component_color_active !important
+                background component_bg_active
+        &:first-child,&:last-child 
+            > a
+                position relative !important
+                color transparent !important
+                display flex
+                align-items center
+                align-content center
+                &:before
+                    font-family 'icomoon'
+                    font-size 1.8em
+                    position absolute
+                    color inherit
+        &:first-child 
+            > a
+                &:before
+                    color component_color !important
+                    content "\e651"
+                    left 0em
+        &:last-child 
+            > a
+                &:before
+                    color component_color !important
+                    content "\e654"
+                    right 0em
+
+
+
+
+
+
+
+
+
+#inner_span_num
+    flex-grow 1
+    .spa2n
+        color color_2    

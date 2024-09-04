@@ -1,0 +1,36 @@
+//- ****
+//- Archivo: settlements_detail_after.jade
+//- Archivo Transpilado: panel/views/dist/settlements_detail_after.php
+//- Author: Sinesss
+//- Tipo: Plantilla de vista PHP
+//- Lenguaje: Pug
+//- Descripción:  Este archivo es el template jade de las secciones (de la parte infeior) de la pagina de detalle de una base
+//- ****
+//- 
+
+script(src='https://code.highcharts.com/highcharts.js')
+script(src='https://code.highcharts.com/modules/exporting.js')
+ul.nav.nav-tabs.menu_detail.menu_people_detail
+    li.nav-item: a.nav-link(  
+        data-item="#{linea.id}",
+        id="link-settlement_dashboard",          
+        ) Dashboard
+    li.nav-item: a.nav-link(  
+        class="link-locations",          
+        onclick="ax('paginaUrl','','1','LOCATIONS','inner_after','&id_settlement=#{linea.id}','sub')"
+        ) Entes
+    li.nav-item: a.nav-link(            
+        onclick="ax('paginaUrl','','1','PEOPLE','inner_after','&LOCATIONS,id_settlement=#{linea.id}','sub')"
+        ) Personas
+    li.nav-item: a.nav-link(
+        onclick="ax('paginaUrl','','1','PRIMARY_SHARES','inner_after','&id_settlement=#{linea.id}','sub')"
+        ) Aportaciones Regulares
+    li.nav-item: a.nav-link(
+        onclick="ax('paginaUrl','','1','SECONDARY_SHARES','inner_after','&id_settlement=#{linea.id}','sub')"
+        ) Aportaciones CAEE
+    li.nav-item: a.nav-link(
+        onclick="ax('paginaUrl','','1','PAYMENTS','inner_after','&id_settlement=#{linea.id}','sub')"
+        ) Otros Pagos
+    li.nav-item: a.nav-link(
+        onclick="ax('paginaUrl','','1','SETTLEMENT_MANAGMENT_GROUP','inner_after','&id_settlement=#{linea.id}','sub')"
+        ) Junta Directiva

@@ -1,0 +1,247 @@
+
+//- ##     ##    ###    ######## ######## ########  ####    ###    ##       #### ######## ########    ########  #######  ########  ##     ##
+//- ###   ###   ## ##      ##    ##       ##     ##  ##    ## ##   ##        ##       ##  ##          ##       ##     ## ##     ## ###   ###
+//- #### ####  ##   ##     ##    ##       ##     ##  ##   ##   ##  ##        ##      ##   ##          ##       ##     ## ##     ## #### ####
+//- ## ### ## ##     ##    ##    ######   ########   ##  ##     ## ##        ##     ##    ######      ######   ##     ## ########  ## ### ##
+//- ##     ## #########    ##    ##       ##   ##    ##  ######### ##        ##    ##     ##          ##       ##     ## ##   ##   ##     ##
+//- ##     ## ##     ##    ##    ##       ##    ##   ##  ##     ## ##        ##   ##      ##          ##       ##     ## ##    ##  ##     ##
+//- ##     ## ##     ##    ##    ######## ##     ## #### ##     ## ######## #### ######## ########    ##        #######  ##     ## ##     ##
+
+
+mixin form(name,form)
+	each item in form
+		-clas= item.divclass ? item.divclass : "col-12"
+		if(item.group)
+			div(Class="col-12 group") #{item.group}
+		if(item.hidden || item.type=='hidden')
+			+input_hidden(name,item)
+		else
+			if(item.type=='textarea')
+				+input_textarea(name,item,clas)
+			else if(item.type=='radio')
+				+input_radio(name,item,clas,options)
+			else if(item.type=='select')
+				+input_select(name,item,clas,options)
+			else if(item.type=='file')
+				+input_file(name,item,clas)
+			else if(item.type=='date')
+				+input_text(name,item,clas)
+			else
+				+input_text(name,item,clas)
+
+mixin input_password(name,line,clas)
+	div(Class="form-group #{clas}")
+		if line.legend
+			.alert.alert-info(role='alert') #{line.legend}
+		label(for="#{name}_#{line.name}") #{line.label}
+		if line.required
+			//- input(required,id="#{name}_#{line.name}",name="#{line.name}",type="#{line.type}",Class="form-control #{line.class}",value="#{line.value}",oninvalid="this.setCustomValidity('El campo no puede estar vació')")
+			input(autocomplete="off",required,id="#{name}_#{line.name}",name="#{line.name}",type="#{line.type}",Class="form-control #{line.class}",value="#{line.value}")
+		else if line.disabled
+			input(autocomplete="off",disabled,id="#{name}_#{line.name}",name="#{line.name}",type="#{line.type}",Class="form-control #{line.class}",value="#{line.value}")
+		else
+			input(autocomplete="off",id="#{name}_#{line.name}",name="#{line.name}",type="#{line.type}",Class="form-control #{line.class}",value="#{line.value}")
+
+
+mixin input_hidden(name,line)
+	input(id="#{name}_#{line.name}",name="#{line.name}",type="hidden",value="#{line.value}")
+
+
+mixin input_text(name,line,clas)
+	-clas2= line.pre ? "input-group" : ""
+	div(Class="form-group #{clas2} #{clas}")
+		if line.legend
+			.alert.alert-info(role='alert') #{line.legend}	
+		if line.label
+			label(for="#{name}_#{line.name}") #{line.label}	
+		if line.pre
+			.input-group-prepend: span.input-group-text #{line.pre}
+		if line.required
+			//- input(required,id="#{name}_#{line.name}",name="#{line.name}",type="#{line.type}",Class="form-control #{line.class}",value="#{line.value}",oninvalid="this.setCustomValidity('El campo no puede estar vació')")
+			input(autocomplete="off",required,id="#{name}_#{line.name}",name="#{line.name}",type="#{line.type}",Class="form-control #{line.class}",value="#{line.value}")
+		else if line.disabled
+			input(disabled,id="#{name}_#{line.name}",name="#{line.name}",type="#{line.type}",Class="form-control #{line.class}",value="#{line.value}")
+		else if line.readonly
+			input(readonly,id="#{name}_#{line.name}",name="#{line.name}",type="#{line.type}",Class="form-control #{line.class}",value="#{line.value}")
+		else
+			input(autocomplete="off",id="#{name}_#{line.name}",name="#{line.name}",type="#{line.type}",Class="form-control #{line.class}",value="#{line.value}")
+
+
+mixin input_textarea(name,line,clas)
+	div(Class="form-group #{clas}")
+		if line.legend
+			.alert.alert-info(role='alert') #{line.legend}	
+		label(for="#{name}_#{line.name}") #{line.label}
+		textarea(id="#{name}_#{line.name}",name="#{line.name}",Class="form-control #{line.class}") #{line.value}
+
+mixin input_select(name,line,clas)
+	div(Class="form-group #{clas}")
+		if line.legend
+			.alert.alert-info(role='alert') #{line.legend}	
+		label(for="#{name}_#{line.name}") #{line.label}
+		//- label #{line.name}
+		select(Class="form-control",id="#{name}_#{line.name}",name="#{line.name}")
+			option(value="",disabled,selected) #{line.label}
+			each item,index in line.options
+				if(index==line.value)
+					option(value="#{index}",selected) #{item}
+				else
+					option(value="#{index}") #{item}	
+					
+mixin input_radio(name,line,clas)
+	div(class="form-group #{clas}"): .row
+		each item in line.options
+			.col
+				if(item==line.value)
+					input(id="#{line.name}_#{item}",type='radio',name="#{line.name}",value="#{item}",checked)
+				else
+					input(id="#{line.name}_#{item}",type='radio',name="#{line.name}",value="#{item}")
+				label(for="#{line.name}_#{item}") #{item}
+
+		
+
+mixin input_select(name,line,clas)
+	div(class="form-group #{clas}")
+		//- label #{line.name}
+		select(class="browser-default",id="#{name}_#{line.name}",name="#{line.name}")
+			option(value="",disabled,selected) #{line.label}
+			each item in line.options
+				if(item==line.value)
+					option(value="#{item}",selected) #{item}
+				else
+					option(value="#{item}") #{item}					
+
+	
+mixin input_date(name,line,clas)
+	div(class="form-group #{clas}")
+		label(for="#{name}_#{line.name}") #{line.label} 
+		input(id="#{name}_#{line.name}",name="#{line.name}",type="text",class="datepicker #{line.class}",value="#{line.value}")
+
+mixin input_file(name,line,clas)
+	div(class="form-group file-field #{clas}")
+		.btn
+			span Archivo
+			input(type="file")
+		.file-path-wrapper
+			input(class="file-path validate",type="text")
+
+
+//-  ######  #### ##     ## ########  ##       ########    ########  #######  ########  ##     ##
+//- ##    ##  ##  ###   ### ##     ## ##       ##          ##       ##     ## ##     ## ###   ###
+//- ##        ##  #### #### ##     ## ##       ##          ##       ##     ## ##     ## #### ####
+//-  ######   ##  ## ### ## ########  ##       ######      ######   ##     ## ########  ## ### ##
+//-       ##  ##  ##     ## ##        ##       ##          ##       ##     ## ##   ##   ##     ##
+//- ##    ##  ##  ##     ## ##        ##       ##          ##       ##     ## ##    ##  ##     ##
+//-  ######  #### ##     ## ##        ######## ########    ##        #######  ##     ## ##     ##
+
+
+mixin simple_form(name,form)
+	each item in form
+		-clas= item.divclass ? item.divclass : "col s12"
+		if(item.group)
+			div(class="col s12 group") #{item.group}
+		if(item.hidden)
+			+input_hidden(name,item)
+		else
+			if(item.type=='textarea')
+				+simple_input_textarea(name,item,clas)
+			else if(item.type=='radio')
+				+simple_input_radio(name,item,clas,options)
+			else if(item.type=='select' || item.type=='select_materialize')
+				+simple_input_select(name,item,clas,options)
+			else if(item.type=='file')
+				+simple_input_file(name,item,clas)
+			else if(item.type=='file')
+				+simple_input_date(name,item,clas)
+			else
+				+simple_input_text(name,item,clas)
+
+
+mixin simple_input_textarea(name,line,clas)
+	div(Class="#{clas}")
+		label 
+			span #{line.label}
+			if line.required=='1'
+				textarea(id="#{name}_#{line.name}",required,autocomplete="#{line.autocomplete}",placeholder="#{line.placeholder}",name="#{line.name}",Class="materialize-textarea #{line.class}") #{line.value}
+			else
+				textarea(id="#{name}_#{line.name}",autocomplete="#{line.autocomplete}",placeholder="#{line.placeholder}",name="#{line.name}",Class="materialize-textarea #{line.class}") #{line.value}
+
+mixin simple_input_radio(name,line,clas)
+	div(class="#{clas}")
+		div: label #{line.label}
+		.row
+			each item in line.options
+				.col
+					if item==line.value
+						input(id="#{line.name}_#{item}",type='radio',name="#{line.name}",value="#{item}",checked)
+					else
+						input(id="#{line.name}_#{item}",type='radio',name="#{line.name}",value="#{item}")
+					label(for="#{line.name}_#{item}") #{item}
+
+mixin simple_input_text(name,line,clas)
+	div(class="#{clas}")
+		label 
+			span #{line.label}
+			if line.required=='1'
+				input(id="#{name}_#{line.name}",required,autocomplete="#{line.autocomplete}",placeholder="#{line.placeholder}",name="#{line.name}",type="#{line.type}",class="#{line.class}",value="#{line.value}")
+			else
+				input(id="#{name}_#{line.name}",autocomplete="#{line.autocomplete}",placeholder="#{line.placeholder}",name="#{line.name}",type="#{line.type}",class="#{line.class}",value="#{line.value}")
+
+mixin simple_input_select(name,line,clas)
+	div(class="#{clas}")
+		label 
+			span #{line.label}
+			if line.required=='1'
+				select(class="browser-default",id="#{name}_#{line.name}",name="#{line.name}",required)
+					+simple_input_select_options(line)
+			else
+				select(class="browser-default",id="#{name}_#{line.name}",name="#{line.name}")
+					+simple_input_select_options(line)
+
+mixin simple_input_select_options(line)
+	option(value="",disabled,selected) #{line.label}
+	each item in line.options
+		option(value="#{item}") #{item}
+
+mixin simple_input_file(name,line,clas)
+	div(class="#{clas}")
+		input(type="file")
+
+mixin simple_input_date(name,line,clas)
+	div(class="#{clas}")
+		input(id="#{name}_#{line.name}",name="#{line.name}",type="#{line.type}",class="datepicker #{line.class}",value="#{line.value}")
+
+
+
+
+
+
+
+//- ##     ##  #######  ########  ########
+//- ###   ### ##     ## ##     ## ##
+//- #### #### ##     ## ##     ## ##
+//- ## ### ## ##     ## ########  ######
+//- ##     ## ##     ## ##   ##   ##
+//- ##     ## ##     ## ##    ##  ##
+//- ##     ##  #######  ##     ## ########
+
+
+mixin input_submit(msg)
+	div(class="form-group col s12")
+		button(class="btn waves-effect waves-blue submit",type="submit") #{msg}
+
+mixin card_sended(msg)
+	if(msg)
+		div(class="card-panel lime lighten-5")!=msg
+
+
+mixin input_combo(line)
+	div(class="form-group")
+		select(class="browser-default",id="#{line.id}",name="#{line.name}",onchange="#{line.onchange}")
+			option(value="",disabled,selected) #{line.label}
+			each item in line.options
+				if(item.index==line.value)
+					option(value="#{item.index}",selected) #{item.value}
+				else
+					option(value="#{item.index}") #{item.value}
+

@@ -1,0 +1,66 @@
+//- ****
+//- Archivo: view_print_operation.jade
+//- Archivo Transpilado: panel/views/dist/view_print_operation.php
+//- Author: Sinesss
+//- Tipo: Plantilla de vista PHP
+//- Lenguaje: Pug
+//- Descripción:  Este archivo es el template jade de la impresion de una operacion, posterior a la agregacion de aportacion
+//- ****
+//- 
+
+include ../../../../work-panel/sources/jade/formMixins.jade
+
+.modal-dialog(role="document")
+    .modal-content: .container
+        .modal-header
+            h5.modal-title #{title}
+            button.close(type='button', data-dismiss='modal', aria-label='Close'): span(aria-hidden='true') ×
+        .modal-body
+            .row
+                .col
+                    div Apellidos y nombres
+                    .text-primary #{operation.apellidos} #{operation.nombre}
+                .col                
+                    .text-right Registrado el #{operation.submitted_at}
+            .row
+                .col
+                    div Código
+                    .text-primary #{operation.code}
+                .col
+                    .text-right Registrado por 
+                    .text-right.text-danger #{operation.registered_by}
+            .alert.alert-primary
+                .row
+                    .col Operación #{operation.id}
+                    .col.text-right Tipo #{operation.type}
+                        
+            table(class="tabla_standard table table-bordered table-sm table-striped")
+                thead
+                    tr
+                        td #
+                        if (operation.type=='Otro Pago')
+                            td Concepto
+                        else
+                            td Mes de aporte
+                        td Base de aporte
+                        td.text-right Subtotal
+                tbody
+                    each share in shares
+                        tr
+                            td.number #{share.number}
+                            if (operation.type=='Otro Pago')
+                                td.month #{share.concept}
+                            else
+                                td.month #{share.month}
+                            td.base #{share.base}
+                            td.subtotal.text-right S/.#{share.amount}
+            .text-right TOTAL: #[strong S/. #{operation.total_amount}]
+            .text-right Pagado el #[.text-danger #{operation.deposit_at}]
+                            
+        .modal-footer
+            button.btn.btn-primary#btn-submit(type='button',onclick="window.print();return false;") #{button}
+            button.btn.btn-secondary(
+                type='button', 
+                data-dismiss='modal', 
+                ) CERRAR
+

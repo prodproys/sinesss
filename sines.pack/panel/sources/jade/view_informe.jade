@@ -1,0 +1,39 @@
+//- ****
+//- Archivo: view_informe.jade
+//- Archivo Transpilado: panel/views/dist/view_informe.php
+//- Author: Sinesss
+//- Tipo: Plantilla de vista PHP
+//- Lenguaje: Pug
+//- Descripción:  Este archivo es el template jade de inform de casos repetidos, de mantenimiento
+//- ****
+//- 
+
+.div_bloque_cuerpo
+
+    h1 Informe de casos repetidos 
+    h6 #{numero_people_reports} de casos
+    .container
+        each person in people_reports
+            .card.mb-3.row
+                h6.card-header.nombre #{person.numero}.- #{person.nombre}
+                ul.list-group
+                    each caso in person.casos
+                        li.list-group-item.caso
+                            h5.ml-1: a(href="custom/people.php?i=#{caso.id}",target="_blank") Código #{caso.code}
+                            h5.ml-1 código de registro: #{caso.id}
+                            .row
+                                ul.ml-4.col.card.pt-4
+                                    li: h6 #[span.text-black-50 Agremiado:] #{caso.profile.is_member} 
+                                    li: h6 #[span.text-black-50 Caee:] #{caso.profile.is_caee} 
+                                    li: h6 #[span.text-black-50 Régimen:] #{caso.profile.id_group} 
+                                    li: h6 #[span.text-black-50 Ente:] #{caso.profile.id_location} 
+                                    li: h6 #[span.text-black-50 última aportacion regular:] #{caso.profile.last_primary} 
+                                    li: h6 #[span.text-black-50 última aportación caee:] #{caso.profile.last_secondary} 
+                                ul.ml-4.col.card.pt-4
+                                    li: h6 #{caso.subs.primaryshares} aportes regulares
+                                    li: h6 #{caso.subs.secondaryshares} aportes caee
+                                    li: h6 #{caso.subs.payments} otros pagos
+                                    li: h6 #{caso.subs.records} historico
+                                    li: h6 #{caso.subs.operations} operaciones
+                                    li: h6 #{caso.subs.documents} documentos
+

@@ -1,0 +1,49 @@
+//- ****
+//- Archivo: view_dashboard.jade
+//- Archivo Transpilado: panel/views/dist/view_dashboard.php
+//- Author: Sinesss
+//- Tipo: Plantilla de vista PHP
+//- Lenguaje: Pug
+//- Descripción: Este archivo es el template jade de la pagina de dashboard del menú
+//- ****
+//- 
+
+script(src='https://code.highcharts.com/highcharts.js')
+script(src='https://code.highcharts.com/modules/exporting.js')
+//- script(src='https://code.highcharts.com/modules/export-data.js')
+//- script(src='https://code.highcharts.com/modules/accessibility.js')
+
+if (id_settlement)
+	.container.div_bloque_cuerpo
+		.row
+			.col-lg-4: .dashboard-car
+				//- a(href="custom/people.php?nc=1#filter='people%5B0%5D=people.is_member%3D1'") Total agremiados #[span #{total_agremiados}]
+				.nolink Total personas #[span #{total_personas}]
+			.col-lg-4: .dashboard-car
+				//- a(href="custom/people.php?nc=1#filter='people%5B0%5D=people.is_caee%3D1'") Aceptan CAEE #[span #{aceptan_caee}]
+				.nolink Total agremiados #[span #{total_agremiados}]
+			.col-lg-4: .dashboard-car
+				//- a(href="custom/people.php?nc=1#filter='people%5B0%5D=people.is_caee%3D1'") Aceptan CAEE #[span #{aceptan_caee}]
+				.nolink Aceptan CAEE #[span #{aceptan_caee}]
+		.row
+
+			.col-lg-6: figure.highcharts-figure: #dashboard-image-2(data-url="ajax_page.php?page=controllers/controller_settlement-chart-2&id_settlement=#{id_settlement}")
+			.col-lg-6: figure.highcharts-figure: #dashboard-image-1(data-url="ajax_page.php?page=controllers/controller_settlement-chart-1&id_settlement=#{id_settlement}")
+
+else 
+	.container.div_bloque_cuerpo
+		.row
+			.col-lg-4: .dashboard-car
+				//- a(href="custom/people.php?nc=1#filter='people%5B0%5D=people.is_member%3D1'") Total agremiados #[span #{total_agremiados}]
+				.nolink Total agremiados #[span #{total_agremiados}]
+			.col-lg-4: .dashboard-car
+				//- a(href="custom/people.php?nc=1#filter='people%5B0%5D=people.is_caee%3D1'") Aceptan CAEE #[span #{aceptan_caee}]
+				.nolink Aceptan CAEE #[span #{aceptan_caee}]
+			.col-lg-4: .dashboard-car
+				//- a(href="custom/settlements.php?nc=1#filter='settlements%5B0%5D=settlements.is_closed%3D0'") Bases activas #[span #{bases_activas}]
+				.nolink Bases activas #[span #{bases_activas}]
+		.row
+			.col-lg-12: figure.highcharts-figure: #dashboard-image-1(data-url="ajax_page.php?page=controllers/controller_home-chart-1")
+			.col-lg-6: figure.highcharts-figure: #dashboard-image-2(data-url="ajax_page.php?page=controllers/controller_home-chart-2")
+			.col-lg-6: figure.highcharts-figure: #dashboard-image-3(data-url="ajax_page.php?page=controllers/controller_home-chart-3")
+	

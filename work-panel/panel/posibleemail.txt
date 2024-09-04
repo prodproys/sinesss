@@ -1,0 +1,31 @@
+Alerta: el vendedor SANTIAGO HUAYANAY REQUIS, ha creado una atención del cliente MARIO ALLISON  TAPIA GARCIA, con los datos:
+Modelo: Foton Gratour PM Limited - 7 As. 
+Fecha de creación de la atención 18 de Octubre de 2017 - 2:55 pm
+
+DNI/RUC: 40210736 
+email: NO@GMAIL.COM 
+
+Jefatura: Walter Cárdenas
+Sucursal: LOS OLIVOS
+
+Teléfono del cliente:  
+Celular del cliente: 992694757 
+Claro del cliente:  
+Movistar del cliente:  
+Entel del cliente:  
+
+RPM del cliente:  
+RPC del cliente: 
+
+http://incapower.pe/panel/custom/ventas_items.php?i=169826
+
+
+Existen 1 atenciones con las que hay coincidencias:
+
+Atención #139148 23 de Setiembre de 2013 - 2:41 pm 
+DNI/RUC: 
+Email: tg_mario@hotmail.com
+Telefonos: 992694757
+http://incapower.pe/panel/custom/ventas_items.php?i=139148
+--------------------------------------------
+

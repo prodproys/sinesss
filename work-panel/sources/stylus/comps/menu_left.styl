@@ -1,0 +1,108 @@
+
+.menu_content
+	.ul_menus
+		position relative
+		list-style none
+		transition all 1s ease-out
+		padding-left 0
+		background #fff
+		margin-bottom 0
+		input
+			display none
+		li.group
+			text-align left
+			label.padre
+				border-bottom 1px solid #FFF
+				padding .8em 1em .8em 1em
+				// background #004b91 !important
+				background linear-gradient(to right, #004b91 1%, darken(#f9fbfb,30)) 
+				// background linear-gradient(to right, rgba(0,0,0,0.7) 10%, #f9fbfb ) !important
+				text-transform uppercase
+				color color_5
+				display block
+				// border-radius 10px
+				// position relative
+				display flex
+				justify-content space-between
+				align-items center
+				// transition background 1s 
+				&:after
+					font-family 'fontawesome'
+					content "\f078"
+					// position absolute
+					right: 1em
+					visibility hidden
+					// transition transform .2s ease-in-out
+					// visibility visible
+					// align-self flex-end
+				&:hover
+					// background darken(color_4,30)
+					background linear-gradient(to right, #004b91 50%, darken(#f9fbfb,30)) 
+					&:after
+						visibility visible
+			.mcontent
+				// overflow-x hidden
+				// max-height calc(100vh - 200px)
+				// overflow-y auto
+				overflow hidden
+				ul
+					margin-top -100vh
+					margin-bottom -100vh
+					transition all .4s ease-out
+					padding-left 0
+					li
+						border-bottom 1px dotted #DDDDDD
+						overflow hidden
+						display block
+						a
+							display block
+							text-align left     
+							padding .6em 5px .6em 16px
+							font-size 1.2em
+							font-weight normal
+							line-height 1.3em
+							// span.number
+							// 	font-size 0.7em
+							// 	font-weight normal
+							// 	float right
+							// 	margin 2px 4px 0 0
+							// 	color color_2        
+							// 	display none
+						&.selected
+							background-color rgba(225,236,237,0.4)
+						&:hover
+							background-color rgba(225,236,237,0.2)
+						&:hover,&.selected
+							a
+								color component_color_active							
+					li.seccion,    
+					li.seccion:hover
+						background none !important
+						// border-bottom 1px solid white
+						a
+							color color_2
+							font-size 1.2em
+							font-variant small-caps
+							margin-top 5px
+							padding-left 0
+							margin-left 16px
+							pointer-events none
+					li.seccion
+						a
+							padding-bottom 0px
+
+							
+		.check_padre:checked + li.group
+			label.padre
+				// background linear-gradient(to bottom, #004b91 50%, white) 
+				background #004b91
+				// background-color darken(color_4,30)
+				// border-radius 10px 10px 0 0
+				&:after
+					transform rotate(180deg)
+					visibility visible
+			.mcontent
+				ul
+					margin-top 0
+					margin-bottom 0
+					transition all 1s ease-out	margin 0px 0 10px 0

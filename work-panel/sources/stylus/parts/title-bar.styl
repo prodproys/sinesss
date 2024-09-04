@@ -1,0 +1,91 @@
+
+//
+// barra titulo
+.bloque_titulo
+    display flex
+    flex-direction row
+    justify-content space-between
+    align-items center
+    background rgba(225,236,237,0.2)
+    padding 1em
+    font-weight bold
+    border-radius 6px 6px 0 0
+    border 1px rgba(black,0.2) solid !important
+    .controles
+        background white
+        color black !important
+        border-color #999
+    .titulo
+        font-size 1.3em
+        flex-grow 1
+        strong, a.type_file
+            line-height 1.5em
+            font-size .8em
+            // font-weight normal
+            text-transform uppercase
+            margin-left 0
+            font-weight normal
+        > .type_file:not(.type-main), .pipe
+            display none
+        .type_file.type-main
+            font-size 1.2em
+            font-weight 700
+            display block
+        .type_file:last-child
+            font-size 1.8em
+            // display block
+            font-weight bold
+            color #000
+            font-family Roboto
+        .pipe
+            color #666
+
+    a:hover
+        text-decoration underline
+    .boton_crear_open,.boton_crear_close
+        display flex
+        align-items center
+        padding-left 10px
+        vertical-align middle
+        margin-right 0
+        // color transparent !important
+        // font-size 0px
+        margin-left 1em
+        &:before
+            content "\e685"
+            font-family 'icomoon' !important;
+            // width 180px
+            // color yellow
+            font-size 12px
+            color #fff
+            margin-right 5px
+     .boton_crear_open:before
+         content "\e685"
+     .boton_crear_close:before
+         content "\e681"
+
+    #abri_cerrar_crear
+        a
+            white-space nowrap
+            // text-transform uppercase
+            // padding 0 1em   
+            color #fff
+            &#cerrar_crear
+                background black
+
+    #boton_excel
+        display flex
+        align-items center
+        background #0a763f
+        white-space nowrap
+        color #fff
+        margin-left 1em
+        margin-right 0
+        &:before
+            content "\f1c3"
+            font-family fontawesome
+            font-size 13px
+            color #fff
+            margin-right 5px
+
+

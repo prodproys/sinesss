@@ -1,0 +1,37 @@
+//- ****
+//- Archivo: people_list_after.jade
+//- Archivo Transpilado: panel/views/dist/people_list_after.php
+//- Author: Sinesss
+//- Tipo: Plantilla de vista PHP
+//- Lenguaje: Pug
+//- Descripción:  Este archivo es el template jade de las secciones (al hacer click en boton reportes) de la pagina de listado de personas
+//- ****
+//- 
+
+ul.nav.nav-tabs.menu_detail.menu_people_detail
+    li: h4.mr-3.ml-2 REPORTES
+    li.nav-item: a.nav-link(  
+        class="link-locations",          
+        onclick="ax('paginaUrl','','1','PEOPLE_EVOLUTION_GENERAL','inner_after','&middlewarelist=evolution_general','sub')"
+        ) Evolución Anual General
+    li.nav-item: a.nav-link(  
+        class="link-locations",          
+        onclick="ax('paginaUrl','','1','PEOPLE_EVOLUTION','inner_after','&middlewarelist=evolution','sub')"
+        ) Evolución Anual por Bases
+    li.nav-item: a.nav-link(  
+        class="link-locations",          
+        onclick="ax('paginaUrl','','1','PEOPLE_EVOLUTION_GROUP','inner_after','&middlewarelist=evolution_group','sub')"
+        ) Evolución Anual por Régimen
+    if _SESSION.permisos.PERMISOS_ID!=2
+        li.nav-item: a.nav-link(  
+            class="link-deducciones",          
+            onclick="ax('paginaUrl','','1','PRIMARY_SHARES','inner_after','&middlewarelist=deducciones','sub')"
+            ) Deducciones Regulares
+        li.nav-item: a.nav-link(  
+            class="link-deducciones_caee",          
+            onclick="ax('paginaUrl','','1','PRIMARY_SHARES','inner_after','&middlewarelist=deducciones_caee','sub')"
+            ) Deducciones CAEE
+    li.nav-item: a.nav-link(  
+        class="link-locations",          
+        onclick="ax('paginaUrl','','1','PEOPLE','inner_after','&middlewarelist=edades','sub')"
+        ) Rangos por edades

@@ -1,0 +1,131 @@
+//
+
+/**
+ * menu superior
+ */
+.menus
+    display flex
+    justify-content flex-end
+    align-items center
+    > a, > li, > b, > strong
+        text-decoration none
+        height auto
+        padding .1em 0 .1em 1.5em
+        position relative
+        margin 0 0 0 .1em !important
+        text-transform uppercase
+        // &.m_user,&.m_grupo
+        //     font-weight bold
+        &.m_user
+            // order -1
+            &:before
+                margin-right 5px
+                content "\e636"
+        &.m_grupo
+            // order -2
+            &:before
+                margin-right 5px
+                content "\e63b" 
+            span
+                color #333
+    a 
+        &:hover
+            text-decoration underline
+            background-color color_1
+            background inherit      
+        .selected  
+            background-color color_1
+            color #000       
+    span.pale
+        height auto
+        width 5px
+        text-align center
+        display none
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ul.supra_menu
+    border-bottom 0px solid #333333
+    display block
+    float left
+    margin-bottom 0px
+    width auto
+    clear left
+
+
+ul.supra_menu li
+    color #555
+    font-weight bold
+    font-size 11px
+    text-shadow 0 1px 0 #fff
+    text-shadow 0 0 0 transparent, 0 1px 0 #fff
+    height 2.95em
+    padding 0 0
+    border 1px solid #ccc
+    border-bottom-color #aaa
+    background linear-gradient('to top', white, #e0e0e0)    
+    box-shadow inset 0 0 1px #fff
+    border-radius 8px 8px 0 0
+    float left
+    height 25px
+    line-height 11px
+    margin-right 1px
+    margin-top 1px
+    max-width 90px
+    overflow hidden
+    text-align center
+
+
+ul.supra_menu
+    li a
+        color #555555
+        display block
+        font-size 12px
+        padding 1px 4px 0
+        text-decoration none
+        font-weight normal
+        height 25px
+
+
+ul.supra_menu
+    li.selected,
+    li:hover
+        color #fff
+        background-color #454545
+        border-color #333 #333 #000
+        box-shadow inset 0 1px 0 rgba(255, 255, 255, .45)
+        background linear-gradient('to top', #474747, #2b2b2b)
+        color #FFFFFF
+        text-shadow 0 0 0 transparent, 0 1px 0 rgba(0, 0, 0, 0.45)
+        a
+            color #CCCCCC

@@ -1,0 +1,265 @@
+[14-Feb-2012 21:02:32] PHP Parse error:  syntax error, unexpected $end in /home/userinca/public_html/panel/vista.php on line 1035
+[14-Feb-2012 21:30:13] PHP Fatal error:  Call to undefined function  prin() in /home/userinca/public_html/panel/vista.php on line 2
+[14-Feb-2012 21:31:24] PHP Fatal error:  Call to undefined function  prin_t() in /home/userinca/public_html/panel/vista.php on line 2
+[14-Feb-2012 21:32:31] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/userinca/public_html/panel/vista.php:2) in /home/userinca/public_html/panel/lib/global.php on line 3
+[14-Feb-2012 14:19:35] PHP Parse error:  syntax error, unexpected $end in /home/userinca/public_html/panel/vista.php on line 119
+[06-Mar-2012 16:43:42] PHP Fatal error:  Class 'PHPExcel_Style_Fill' not found in /home/userinca/public_html/panel/lib/PHPExcel/Style.php on line 121
+[06-Mar-2012 16:59:09] PHP Fatal error:  Class 'PHPExcel_Style_Fill' not found in /home/userinca/public_html/panel/lib/PHPExcel/Style.php on line 121
+[06-Mar-2012 17:03:10] PHP Fatal error:  Class 'PHPExcel_Style_Fill' not found in /home/userinca/public_html/panel/lib/PHPExcel/Style.php on line 121
+[06-Mar-2012 19:22:56] PHP Fatal error:  Class 'PHPExcel_Style_Fill' not found in /home/userinca/public_html/panel/lib/PHPExcel/Style.php on line 121
+[06-Mar-2012 19:44:23] PHP Fatal error:  Class 'PHPExcel_Style_Fill' not found in /home/userinca/public_html/panel/lib/PHPExcel/Style.php on line 121
+[07-Mar-2012 16:52:28] PHP Parse error:  syntax error, unexpected $end in /home/userinca/public_html/panel/lib/sesion.php on line 79
+[15-Mar-2012 11:33:46] PHP Parse error:  syntax error, unexpected $end, expecting ')' in /home/userinca/public_html/panel/config/tablas.php on line 2933
+[15-Mar-2012 12:44:29] PHP Warning:  Unexpected character in input:  ''' (ASCII=39) state=1 in /home/userinca/public_html/panel/config/tablas.php on line 179
+[15-Mar-2012 12:44:29] PHP Parse error:  syntax error, unexpected $end, expecting ')' in /home/userinca/public_html/panel/config/tablas.php on line 179
+[15-Mar-2012 12:44:31] PHP Warning:  Unexpected character in input:  ''' (ASCII=39) state=1 in /home/userinca/public_html/panel/config/tablas.php on line 5389
+[15-Mar-2012 12:44:31] PHP Parse error:  syntax error, unexpected $end, expecting ')' in /home/userinca/public_html/panel/config/tablas.php on line 5389
+[16-Mar-2012 09:20:32] PHP Warning:  Unexpected character in input:  ''' (ASCII=39) state=1 in /home/userinca/public_html/panel/lib/util.php on line 60
+[16-Mar-2012 09:20:32] PHP Parse error:  syntax error, unexpected $end, expecting ']' in /home/userinca/public_html/panel/lib/util.php on line 60
+[16-Mar-2012 09:20:33] PHP Parse error:  syntax error, unexpected $end, expecting ')' in /home/userinca/public_html/panel/lib/util.php on line 328
+[16-Mar-2012 09:20:33] PHP Parse error:  syntax error, unexpected $end in /home/userinca/public_html/panel/lib/util.php on line 803
+[16-Mar-2012 09:20:33] PHP Parse error:  syntax error, unexpected $end, expecting ']' in /home/userinca/public_html/panel/lib/util.php on line 1187
+[16-Mar-2012 09:20:35] PHP Parse error:  syntax error, unexpected $end in /home/userinca/public_html/panel/lib/util.php on line 3528
+[23-Mar-2012 13:34:00] PHP Fatal error:  Class 'PHPExcel_Style_Fill' not found in /home/userinca/public_html/panel/lib/PHPExcel/Style.php on line 121
+[23-Mar-2012 19:53:30] PHP Fatal error:  Class 'PHPExcel_Style_Fill' not found in /home/userinca/public_html/panel/lib/PHPExcel/Style.php on line 121
+[24-Mar-2012 06:00:03] PHP Parse error:  syntax error, unexpected $end in /home/userinca/public_html/panel/ajax_sql.php on line 84
+[26-Mar-2012 11:23:27] PHP Warning:  Unexpected character in input:  ''' (ASCII=39) state=1 in /home/userinca/public_html/panel/config/tablas.php on line 4048
+[26-Mar-2012 11:23:27] PHP Parse error:  syntax error, unexpected $end, expecting ')' in /home/userinca/public_html/panel/config/tablas.php on line 4048
+[27-Mar-2012 10:28:41] PHP Parse error:  syntax error, unexpected $end, expecting ')' in /home/userinca/public_html/panel/lib/util.php on line 1645
+[27-Mar-2012 10:28:41] PHP Parse error:  syntax error, unexpected $end in /home/userinca/public_html/panel/lib/util.php on line 2299
+[27-Mar-2012 10:28:42] PHP Warning:  Unexpected character in input:  ''' (ASCII=39) state=1 in /home/userinca/public_html/panel/lib/util.php on line 2817
+[27-Mar-2012 10:28:42] PHP Parse error:  syntax error, unexpected $end in /home/userinca/public_html/panel/lib/util.php on line 2817
+[27-Mar-2012 10:28:42] PHP Warning:  Unterminated comment starting line 3050 in /home/userinca/public_html/panel/lib/util.php on line 3050
+[27-Mar-2012 10:28:42] PHP Fatal error:  fatal flex scanner internal error--end of buffer missed in /home/userinca/public_html/panel/lib/util.php on line 3050
+[28-Mar-2012 08:53:29] PHP Warning:  Unexpected character in input:  ''' (ASCII=39) state=1 in /home/userinca/public_html/panel/config/tablas.php on line 1120
+[28-Mar-2012 08:53:29] PHP Parse error:  syntax error, unexpected $end, expecting ')' in /home/userinca/public_html/panel/config/tablas.php on line 1120
+[31-Mar-2012 10:48:18] PHP Warning:  Unterminated comment starting line 5313 in /home/userinca/public_html/panel/config/tablas.php on line 5313
+[31-Mar-2012 10:48:18] PHP Fatal error:  fatal flex scanner internal error--end of buffer missed in /home/userinca/public_html/panel/config/tablas.php on line 5313
+[31-Mar-2012 11:50:05] PHP Warning:  Unterminated comment starting line 1427 in /home/userinca/public_html/panel/config/tablas.php on line 1427
+[31-Mar-2012 11:50:05] PHP Fatal error:  fatal flex scanner internal error--end of buffer missed in /home/userinca/public_html/panel/config/tablas.php on line 1427
+[02-Apr-2012 12:06:46] PHP Warning:  extract() [<a href='function.extract'>function.extract</a>]: First argument should be an array in /home/userinca/public_html/panel/lib/global.php on line 185
+[02-Apr-2012 13:35:33] PHP Warning:  Unexpected character in input:  ''' (ASCII=39) state=1 in /home/userinca/public_html/panel/config/tablas.php on line 840
+[02-Apr-2012 13:35:33] PHP Parse error:  syntax error, unexpected T_IF in /home/userinca/public_html/panel/config/tablas.php on line 841
+[03-Apr-2012 08:43:21] PHP Parse error:  syntax error, unexpected $end, expecting ')' in /home/userinca/public_html/panel/config/tablas.php on line 3781
+[03-Apr-2012 08:49:08] PHP Warning:  Unexpected character in input:  ''' (ASCII=39) state=1 in /home/userinca/public_html/panel/config/tablas.php on line 1205
+[03-Apr-2012 08:49:08] PHP Parse error:  syntax error, unexpected '=', expecting ')' in /home/userinca/public_html/panel/config/tablas.php on line 1205
+[14-Apr-2012 08:57:05] PHP Parse error:  syntax error, unexpected $end, expecting ')' in /home/userinca/public_html/panel/config/tablas.php on line 3449
+[14-Apr-2012 08:57:05] PHP Parse error:  syntax error, unexpected '=', expecting ')' in /home/userinca/public_html/panel/config/tablas.php on line 3980
+[14-Apr-2012 11:40:34] PHP Parse error:  syntax error, unexpected $end, expecting ')' in /home/userinca/public_html/panel/config/tablas.php on line 603
+[14-Apr-2012 11:45:00] PHP Parse error:  syntax error, unexpected T_CONSTANT_ENCAPSED_STRING in /home/userinca/public_html/panel/postscript.php(14) : eval()'d code on line 13
+[14-Apr-2012 11:45:11] PHP Parse error:  syntax error, unexpected T_CONSTANT_ENCAPSED_STRING in /home/userinca/public_html/panel/postscript.php(14) : eval()'d code on line 13
+[14-Apr-2012 11:45:58] PHP Parse error:  syntax error, unexpected T_CONSTANT_ENCAPSED_STRING in /home/userinca/public_html/panel/postscript.php(14) : eval()'d code on line 13
+[14-Apr-2012 11:46:32] PHP Parse error:  syntax error, unexpected $end, expecting ')' in /home/userinca/public_html/panel/config/tablas.php on line 3037
+[14-Apr-2012 11:46:47] PHP Parse error:  syntax error, unexpected T_CONSTANT_ENCAPSED_STRING in /home/userinca/public_html/panel/postscript.php(14) : eval()'d code on line 13
+[14-Apr-2012 11:55:22] PHP Parse error:  syntax error, unexpected T_CONSTANT_ENCAPSED_STRING in /home/userinca/public_html/panel/postscript.php(14) : eval()'d code on line 13
+[14-Apr-2012 11:55:52] PHP Parse error:  syntax error, unexpected T_CONSTANT_ENCAPSED_STRING in /home/userinca/public_html/panel/postscript.php(14) : eval()'d code on line 13
+[14-Apr-2012 11:56:28] PHP Parse error:  syntax error, unexpected T_CONSTANT_ENCAPSED_STRING in /home/userinca/public_html/panel/postscript.php(14) : eval()'d code on line 13
+[14-Apr-2012 11:57:34] PHP Warning:  Unexpected character in input:  ''' (ASCII=39) state=1 in /home/userinca/public_html/panel/config/tablas.php on line 3077
+[14-Apr-2012 11:57:34] PHP Parse error:  syntax error, unexpected '<' in /home/userinca/public_html/panel/config/tablas.php on line 3077
+[14-Apr-2012 12:02:54] PHP Parse error:  syntax error, unexpected $end, expecting ')' in /home/userinca/public_html/panel/config/tablas.php on line 2827
+[14-Apr-2012 12:07:28] PHP Parse error:  syntax error, unexpected $end, expecting ')' in /home/userinca/public_html/panel/config/tablas.php on line 4875
+[16-Apr-2012 00:27:06] PHP Parse error:  syntax error, unexpected $end, expecting ')' in /home/userinca/public_html/panel/config/tablas.php on line 4720
+[16-Apr-2012 08:03:57] PHP Parse error:  syntax error, unexpected $end, expecting ')' in /home/userinca/public_html/panel/config/tablas.php on line 60
+[16-Apr-2012 10:53:34] PHP Warning:  Unexpected character in input:  ''' (ASCII=39) state=1 in /home/userinca/public_html/panel/config/tablas.php on line 3536
+[16-Apr-2012 10:53:34] PHP Parse error:  syntax error, unexpected $end, expecting ')' in /home/userinca/public_html/panel/config/tablas.php on line 3536
+[16-Apr-2012 11:43:23] PHP Warning:  Unterminated comment starting line 214 in /home/userinca/public_html/panel/config/tablas.php on line 214
+[16-Apr-2012 11:43:23] PHP Fatal error:  fatal flex scanner internal error--end of buffer missed in /home/userinca/public_html/panel/config/tablas.php on line 214
+[16-Apr-2012 11:43:23] PHP Parse error:  syntax error, unexpected $end, expecting ')' in /home/userinca/public_html/panel/config/tablas.php on line 325
+[16-Apr-2012 11:43:25] PHP Parse error:  syntax error, unexpected $end, expecting ')' in /home/userinca/public_html/panel/config/tablas.php on line 4062
+[16-Apr-2012 11:43:26] PHP Parse error:  syntax error, unexpected $end in /home/userinca/public_html/panel/config/tablas.php on line 7175
+[18-Apr-2012 10:38:26] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 24 bytes) in /home/userinca/public_html/panel/lib/util.php on line 4540
+[18-Apr-2012 11:07:34] PHP Warning:  Unterminated comment starting line 1118 in /home/userinca/public_html/panel/config/tablas.php on line 1118
+[18-Apr-2012 11:07:34] PHP Fatal error:  fatal flex scanner internal error--end of buffer missed in /home/userinca/public_html/panel/config/tablas.php on line 1118
+[18-Apr-2012 11:07:37] PHP Parse error:  syntax error, unexpected $end, expecting ')' in /home/userinca/public_html/panel/config/tablas.php on line 7597
+[18-Apr-2012 12:32:10] PHP Warning:  Unexpected character in input:  ''' (ASCII=39) state=1 in /home/userinca/public_html/panel/config/tablas.php on line 1888
+[18-Apr-2012 12:32:10] PHP Parse error:  syntax error, unexpected '=', expecting ')' in /home/userinca/public_html/panel/config/tablas.php on line 1888
+[18-Apr-2012 12:51:15] PHP Warning:  Unexpected character in input:  ''' (ASCII=39) state=1 in /home/userinca/public_html/panel/config/tablas.php on line 1166
+[18-Apr-2012 12:51:15] PHP Parse error:  syntax error, unexpected $end, expecting ')' in /home/userinca/public_html/panel/config/tablas.php on line 1166
+[18-Apr-2012 12:51:16] PHP Parse error:  syntax error, unexpected $end, expecting ')' in /home/userinca/public_html/panel/config/tablas.php on line 2049
+[18-Apr-2012 13:08:25] PHP Warning:  Unexpected character in input:  ''' (ASCII=39) state=1 in /home/userinca/public_html/panel/config/tablas.php on line 1439
+[18-Apr-2012 13:08:25] PHP Parse error:  syntax error, unexpected $end, expecting ')' in /home/userinca/public_html/panel/config/tablas.php on line 1439
+[18-Apr-2012 13:08:27] PHP Parse error:  syntax error, unexpected $end, expecting ')' in /home/userinca/public_html/panel/config/tablas.php on line 3620
+[18-Apr-2012 13:08:27] PHP Warning:  Unexpected character in input:  ''' (ASCII=39) state=1 in /home/userinca/public_html/panel/config/tablas.php on line 3731
+[18-Apr-2012 13:08:27] PHP Parse error:  syntax error, unexpected $end, expecting ')' in /home/userinca/public_html/panel/config/tablas.php on line 3731
+[18-Apr-2012 13:08:28] PHP Warning:  Unexpected character in input:  ''' (ASCII=39) state=1 in /home/userinca/public_html/panel/config/tablas.php on line 6084
+[18-Apr-2012 13:08:28] PHP Parse error:  syntax error, unexpected $end, expecting ')' in /home/userinca/public_html/panel/config/tablas.php on line 6084
+[18-Apr-2012 13:08:29] PHP Parse error:  syntax error, unexpected $end, expecting ')' in /home/userinca/public_html/panel/config/tablas.php on line 7589
+[24-Apr-2012 11:53:09] PHP Parse error:  syntax error, unexpected $end, expecting ')' in /home/userinca/public_html/panel/config/tablas.php on line 4562
+[25-Apr-2012 12:57:03] PHP Warning:  Unexpected character in input:  ''' (ASCII=39) state=1 in /home/userinca/public_html/panel/config/tablas.php on line 1208
+[25-Apr-2012 12:57:03] PHP Parse error:  syntax error, unexpected $end, expecting ')' in /home/userinca/public_html/panel/config/tablas.php on line 1208
+[26-Apr-2012 08:52:49] PHP Parse error:  syntax error, unexpected $end, expecting ')' in /home/userinca/public_html/panel/config/tablas.php on line 494
+[26-Apr-2012 08:52:51] PHP Parse error:  syntax error, unexpected $end, expecting ')' in /home/userinca/public_html/panel/config/tablas.php on line 4243
+[27-Apr-2012 02:54:36] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home/userinca/public_html/panel/exportar_excel.php on line 79
+[26-Apr-2012 16:56:56] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 93 bytes) in /home/userinca/public_html/panel/lib/PHPExcel/Worksheet.php on line 942
+[26-Apr-2012 16:59:56] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 95 bytes) in /home/userinca/public_html/panel/lib/PHPExcel/Worksheet.php on line 942
+[26-Apr-2012 17:00:25] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 93 bytes) in /home/userinca/public_html/panel/lib/PHPExcel/Worksheet.php on line 942
+[27-Apr-2012 10:49:27] PHP Parse error:  syntax error, unexpected '=', expecting ')' in /home/userinca/public_html/panel/config/tablas.php on line 7146
+[27-Apr-2012 16:45:32] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 96 bytes) in /home/userinca/public_html/panel/lib/PHPExcel/Worksheet.php on line 942
+[27-Apr-2012 16:47:03] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 96 bytes) in /home/userinca/public_html/panel/lib/PHPExcel/Worksheet.php on line 942
+[27-Apr-2012 16:47:27] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 96 bytes) in /home/userinca/public_html/panel/lib/PHPExcel/Worksheet.php on line 942
+[27-Apr-2012 16:49:17] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 24 bytes) in /home/userinca/public_html/panel/lib/PHPExcel/Cell.php on line 513
+[27-Apr-2012 16:50:42] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 24 bytes) in /home/userinca/public_html/panel/lib/PHPExcel/Cell.php on line 513
+[27-Apr-2012 16:51:20] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 94 bytes) in /home/userinca/public_html/panel/lib/PHPExcel/Worksheet.php on line 942
+[27-Apr-2012 16:51:36] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 96 bytes) in /home/userinca/public_html/panel/lib/PHPExcel/Worksheet.php on line 942
+[27-Apr-2012 16:53:24] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 94 bytes) in /home/userinca/public_html/panel/lib/PHPExcel/Worksheet.php on line 942
+[27-Apr-2012 17:04:03] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 91 bytes) in /home/userinca/public_html/panel/lib/PHPExcel/Worksheet.php on line 942
+[28-Apr-2012 09:44:31] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 93 bytes) in /home/userinca/public_html/panel/lib/PHPExcel/Worksheet.php on line 942
+[28-Apr-2012 11:44:25] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 95 bytes) in /home/userinca/public_html/panel/lib/PHPExcel/Worksheet.php on line 942
+[30-Apr-2012 14:02:10] PHP Warning:  extract() [<a href='function.extract'>function.extract</a>]: First argument should be an array in /home/userinca/public_html/panel/lib/global.php on line 185
+[07-May-2012 11:51:04] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 2 bytes) in /home/userinca/public_html/panel/lib/PHPExcel/Cell.php on line 513
+[07-May-2012 11:51:12] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 2 bytes) in /home/userinca/public_html/panel/lib/PHPExcel/Cell.php on line 513
+[08-May-2012 14:54:14] PHP Warning:  Unexpected character in input:  ''' (ASCII=39) state=1 in /home/userinca/public_html/panel/config/tablas.php on line 1121
+[08-May-2012 14:54:14] PHP Parse error:  syntax error, unexpected $end, expecting ')' in /home/userinca/public_html/panel/config/tablas.php on line 1121
+[15-May-2012 23:59:57] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Access denied for user 'userinca'@'localhost' (using password: NO) in /home/userinca/public_html/panel/lib/conexion.php on line 2
+[18-May-2012 11:23:49] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 95 bytes) in /home/userinca/public_html/panel/lib/PHPExcel/Worksheet.php on line 942
+[18-May-2012 17:19:50] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 72 bytes) in /home/userinca/public_html/panel/lib/util.php on line 4624
+[21-May-2012 12:20:35] PHP Parse error:  syntax error, unexpected '=', expecting ')' in /home/userinca/public_html/panel/config/tablas.php on line 618
+[21-May-2012 12:20:35] PHP Parse error:  syntax error, unexpected '=', expecting ')' in /home/userinca/public_html/panel/config/tablas.php on line 618
+[21-May-2012 12:20:38] PHP Parse error:  syntax error, unexpected $end in /home/userinca/public_html/panel/config/tablas.php on line 6875
+[23-May-2012 22:42:17] PHP Parse error:  syntax error, unexpected $end, expecting ']' in /home/userinca/public_html/panel/lib/global.php on line 212
+[23-May-2012 12:42:29] PHP Parse error:  syntax error, unexpected $end in /home/userinca/public_html/panel/lib/util.php on line 2470
+[24-May-2012 18:09:40] PHP Parse error:  syntax error, unexpected $end, expecting ')' in /home/userinca/public_html/panel/config/tablas.php on line 1834
+[24-May-2012 18:12:19] PHP Warning:  Unexpected character in input:  ''' (ASCII=39) state=1 in /home/userinca/public_html/panel/config/tablas.php on line 4926
+[24-May-2012 18:12:19] PHP Parse error:  syntax error, unexpected T_STRING, expecting ')' in /home/userinca/public_html/panel/config/tablas.php on line 4926
+[29-May-2012 08:40:47] PHP Parse error:  syntax error, unexpected $end, expecting ')' in /home/userinca/public_html/panel/config/tablas.php on line 381
+[01-Jun-2012 04:07:52] PHP Fatal error:  Uncaught exception 'Exception' with message 'Cell coordinate can not be zero-length string.' in /home/userinca/public_html/panel/lib/PHPExcel/Cell.php:511
+Stack trace:
+#0 /home/userinca/public_html/panel/lib/PHPExcel/Style.php(283): PHPExcel_Cell::coordinateFromString('')
+#1 /home/userinca/public_html/panel/exportar_excel.php(282): PHPExcel_Style->applyFromArray(Array)
+#2 {main}
+  thrown in /home/userinca/public_html/panel/lib/PHPExcel/Cell.php on line 511
+[01-Jun-2012 04:07:52] PHP Fatal error:  Uncaught exception 'Exception' with message 'Cell coordinate can not be zero-length string.' in /home/userinca/public_html/panel/lib/PHPExcel/Cell.php:511
+Stack trace:
+#0 /home/userinca/public_html/panel/lib/PHPExcel/Style.php(283): PHPExcel_Cell::coordinateFromString('')
+#1 /home/userinca/public_html/panel/exportar_excel.php(282): PHPExcel_Style->applyFromArray(Array)
+#2 {main}
+  thrown in /home/userinca/public_html/panel/lib/PHPExcel/Cell.php on line 511
+[07-Jun-2012 10:35:09] PHP Parse error:  syntax error, unexpected $end, expecting ')' in /home/userinca/public_html/panel/config/tablas.php on line 4050
+[08-Jun-2012 11:00:28] PHP Parse error:  syntax error, unexpected $end in /home/userinca/public_html/panel/vista.php on line 193
+[12-Jun-2012 16:29:58] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 96 bytes) in /home/userinca/public_html/panel/lib/PHPExcel/Worksheet.php on line 942
+[12-Jun-2012 16:30:14] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 24 bytes) in /home/userinca/public_html/panel/lib/PHPExcel/Worksheet.php on line 943
+[12-Jun-2012 18:03:36] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 2 bytes) in /home/userinca/public_html/panel/lib/PHPExcel/Cell.php on line 513
+[13-Jun-2012 10:49:20] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 24 bytes) in /home/userinca/public_html/panel/lib/PHPExcel/Worksheet.php on line 943
+[21-Jun-2012 14:49:26] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 24 bytes) in /home/userinca/public_html/panel/lib/PHPExcel/Cell.php on line 145
+[21-Jun-2012 15:57:36] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 24 bytes) in /home/userinca/public_html/panel/lib/util.php on line 4625
+[27-Jun-2012 11:20:18] PHP Parse error:  syntax error, unexpected $end, expecting ')' in /home/userinca/public_html/panel/config/tablas.php on line 7551
+[27-Jun-2012 11:20:38] PHP Warning:  Unexpected character in input:  ''' (ASCII=39) state=1 in /home/userinca/public_html/panel/config/tablas.php on line 5644
+[27-Jun-2012 11:20:38] PHP Parse error:  syntax error, unexpected T_STRING, expecting ')' in /home/userinca/public_html/panel/config/tablas.php on line 5644
+[27-Jun-2012 11:20:39] PHP Warning:  Unexpected character in input:  ''' (ASCII=39) state=1 in /home/userinca/public_html/panel/config/tablas.php on line 6316
+[27-Jun-2012 11:20:39] PHP Parse error:  syntax error, unexpected '<' in /home/userinca/public_html/panel/config/tablas.php on line 6317
+[29-Jun-2012 08:22:49] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 5 bytes) in /home/userinca/public_html/panel/lib/PHPExcel/Cell.php on line 513
+[29-Jun-2012 08:23:03] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 24 bytes) in /home/userinca/public_html/panel/lib/PHPExcel/Cell.php on line 513
+[29-Jun-2012 08:23:18] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 24 bytes) in /home/userinca/public_html/panel/lib/PHPExcel/Cell.php on line 513
+[29-Jun-2012 08:23:46] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 103 bytes) in /home/userinca/public_html/panel/lib/PHPExcel/Worksheet.php on line 942
+[29-Jun-2012 08:29:08] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 5 bytes) in /home/userinca/public_html/panel/lib/PHPExcel/Cell.php on line 513
+[29-Jun-2012 08:45:51] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 24 bytes) in /home/userinca/public_html/panel/lib/PHPExcel/Worksheet.php on line 943
+[29-Jun-2012 10:18:36] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 72 bytes) in /home/userinca/public_html/panel/lib/util.php on line 4624
+[06-Jul-2012 19:59:03] PHP Fatal error:  Uncaught exception 'Exception' with message 'Cell coordinate can not be zero-length string.' in /home/userinca/public_html/panel/lib/PHPExcel/Cell.php:511
+Stack trace:
+#0 /home/userinca/public_html/panel/lib/PHPExcel/Style.php(283): PHPExcel_Cell::coordinateFromString('')
+#1 /home/userinca/public_html/panel/exportar_excel.php(282): PHPExcel_Style->applyFromArray(Array)
+#2 {main}
+  thrown in /home/userinca/public_html/panel/lib/PHPExcel/Cell.php on line 511
+[09-Jul-2012 19:20:32] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 24 bytes) in /home/userinca/public_html/panel/lib/PHPExcel/Cell.php on line 135
+[09-Jul-2012 19:20:49] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 2 bytes) in /home/userinca/public_html/panel/lib/PHPExcel/Cell.php on line 125
+[09-Jul-2012 19:20:49] PHP Fatal error:  Uncaught exception 'Exception' with message 'Cell coordinate can not be zero-length string.' in /home/userinca/public_html/panel/lib/PHPExcel/Cell.php:511
+Stack trace:
+#0 /home/userinca/public_html/panel/lib/PHPExcel/Style.php(283): PHPExcel_Cell::coordinateFromString('')
+#1 /home/userinca/public_html/panel/exportar_excel.php(282): PHPExcel_Style->applyFromArray(Array)
+#2 {main}
+  thrown in /home/userinca/public_html/panel/lib/PHPExcel/Cell.php on line 511
+[09-Jul-2012 19:21:07] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 2 bytes) in /home/userinca/public_html/panel/lib/PHPExcel/Cell.php on line 125
+[09-Jul-2012 19:21:07] PHP Fatal error:  Uncaught exception 'Exception' with message 'Cell coordinate can not be zero-length string.' in /home/userinca/public_html/panel/lib/PHPExcel/Cell.php:511
+Stack trace:
+#0 /home/userinca/public_html/panel/lib/PHPExcel/Style.php(283): PHPExcel_Cell::coordinateFromString('')
+#1 /home/userinca/public_html/panel/exportar_excel.php(282): PHPExcel_Style->applyFromArray(Array)
+#2 {main}
+  thrown in /home/userinca/public_html/panel/lib/PHPExcel/Cell.php on line 511
+[09-Jul-2012 19:21:07] PHP Fatal error:  Uncaught exception 'Exception' with message 'Cell coordinate can not be zero-length string.' in /home/userinca/public_html/panel/lib/PHPExcel/Cell.php:511
+Stack trace:
+#0 /home/userinca/public_html/panel/lib/PHPExcel/Style.php(283): PHPExcel_Cell::coordinateFromString('')
+#1 /home/userinca/public_html/panel/exportar_excel.php(282): PHPExcel_Style->applyFromArray(Array)
+#2 {main}
+  thrown in /home/userinca/public_html/panel/lib/PHPExcel/Cell.php on line 511
+[09-Jul-2012 19:21:24] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 24 bytes) in /home/userinca/public_html/panel/lib/PHPExcel/Cell.php on line 135
+[09-Jul-2012 19:21:24] PHP Fatal error:  Uncaught exception 'Exception' with message 'Cell coordinate can not be zero-length string.' in /home/userinca/public_html/panel/lib/PHPExcel/Cell.php:511
+Stack trace:
+#0 /home/userinca/public_html/panel/lib/PHPExcel/Style.php(283): PHPExcel_Cell::coordinateFromString('')
+#1 /home/userinca/public_html/panel/exportar_excel.php(282): PHPExcel_Style->applyFromArray(Array)
+#2 {main}
+  thrown in /home/userinca/public_html/panel/lib/PHPExcel/Cell.php on line 511
+[09-Jul-2012 19:21:42] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 24 bytes) in /home/userinca/public_html/panel/lib/PHPExcel/Cell.php on line 135
+[09-Jul-2012 19:21:42] PHP Fatal error:  Uncaught exception 'Exception' with message 'Cell coordinate can not be zero-length string.' in /home/userinca/public_html/panel/lib/PHPExcel/Cell.php:511
+Stack trace:
+#0 /home/userinca/public_html/panel/lib/PHPExcel/Style.php(283): PHPExcel_Cell::coordinateFromString('')
+#1 /home/userinca/public_html/panel/exportar_excel.php(282): PHPExcel_Style->applyFromArray(Array)
+#2 {main}
+  thrown in /home/userinca/public_html/panel/lib/PHPExcel/Cell.php on line 511
+[09-Jul-2012 19:21:42] PHP Fatal error:  Uncaught exception 'Exception' with message 'Cell coordinate can not be zero-length string.' in /home/userinca/public_html/panel/lib/PHPExcel/Cell.php:511
+Stack trace:
+#0 /home/userinca/public_html/panel/lib/PHPExcel/Style.php(283): PHPExcel_Cell::coordinateFromString('')
+#1 /home/userinca/public_html/panel/exportar_excel.php(282): PHPExcel_Style->applyFromArray(Array)
+#2 {main}
+  thrown in /home/userinca/public_html/panel/lib/PHPExcel/Cell.php on line 511
+[09-Jul-2012 19:21:59] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 95 bytes) in /home/userinca/public_html/panel/lib/PHPExcel/Worksheet.php on line 942
+[09-Jul-2012 19:21:59] PHP Fatal error:  Uncaught exception 'Exception' with message 'Cell coordinate can not be zero-length string.' in /home/userinca/public_html/panel/lib/PHPExcel/Cell.php:511
+Stack trace:
+#0 /home/userinca/public_html/panel/lib/PHPExcel/Style.php(283): PHPExcel_Cell::coordinateFromString('')
+#1 /home/userinca/public_html/panel/exportar_excel.php(282): PHPExcel_Style->applyFromArray(Array)
+#2 {main}
+  thrown in /home/userinca/public_html/panel/lib/PHPExcel/Cell.php on line 511
+[09-Jul-2012 19:21:59] PHP Fatal error:  Uncaught exception 'Exception' with message 'Cell coordinate can not be zero-length string.' in /home/userinca/public_html/panel/lib/PHPExcel/Cell.php:511
+Stack trace:
+#0 /home/userinca/public_html/panel/lib/PHPExcel/Style.php(283): PHPExcel_Cell::coordinateFromString('')
+#1 /home/userinca/public_html/panel/exportar_excel.php(282): PHPExcel_Style->applyFromArray(Array)
+#2 {main}
+  thrown in /home/userinca/public_html/panel/lib/PHPExcel/Cell.php on line 511
+[09-Jul-2012 19:22:15] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 95 bytes) in /home/userinca/public_html/panel/lib/PHPExcel/Worksheet.php on line 942
+[09-Jul-2012 19:22:32] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 95 bytes) in /home/userinca/public_html/panel/lib/PHPExcel/Worksheet.php on line 942
+[09-Jul-2012 19:22:58] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 24 bytes) in /home/userinca/public_html/panel/lib/PHPExcel/Cell.php on line 513
+[09-Jul-2012 19:23:09] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 24 bytes) in /home/userinca/public_html/panel/lib/PHPExcel/Cell.php on line 513
+[09-Jul-2012 19:23:51] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 24 bytes) in /home/userinca/public_html/panel/lib/PHPExcel/Cell.php on line 513
+[09-Jul-2012 19:29:02] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 24 bytes) in /home/userinca/public_html/panel/lib/PHPExcel/Cell.php on line 513
+[09-Jul-2012 19:32:23] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 95 bytes) in /home/userinca/public_html/panel/lib/PHPExcel/Worksheet.php on line 942
+[09-Jul-2012 19:32:41] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 24 bytes) in /home/userinca/public_html/panel/lib/PHPExcel/Cell.php on line 513
+[11-Jul-2012 21:02:21] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 93 bytes) in /home/userinca/public_html/panel/lib/PHPExcel/Worksheet.php on line 942
+[11-Jul-2012 21:02:39] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 93 bytes) in /home/userinca/public_html/panel/lib/PHPExcel/Worksheet.php on line 942
+[11-Jul-2012 21:02:39] PHP Fatal error:  Uncaught exception 'Exception' with message 'Cell coordinate can not be zero-length string.' in /home/userinca/public_html/panel/lib/PHPExcel/Cell.php:511
+Stack trace:
+#0 /home/userinca/public_html/panel/lib/PHPExcel/Style.php(283): PHPExcel_Cell::coordinateFromString('')
+#1 /home/userinca/public_html/panel/exportar_excel.php(282): PHPExcel_Style->applyFromArray(Array)
+#2 {main}
+  thrown in /home/userinca/public_html/panel/lib/PHPExcel/Cell.php on line 511
+[11-Jul-2012 21:02:55] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 96 bytes) in /home/userinca/public_html/panel/lib/PHPExcel/Worksheet.php on line 942
+[11-Jul-2012 21:02:55] PHP Fatal error:  Uncaught exception 'Exception' with message 'Cell coordinate can not be zero-length string.' in /home/userinca/public_html/panel/lib/PHPExcel/Cell.php:511
+Stack trace:
+#0 /home/userinca/public_html/panel/lib/PHPExcel/Style.php(283): PHPExcel_Cell::coordinateFromString('')
+#1 /home/userinca/public_html/panel/exportar_excel.php(282): PHPExcel_Style->applyFromArray(Array)
+#2 {main}
+  thrown in /home/userinca/public_html/panel/lib/PHPExcel/Cell.php on line 511
+[13-Jul-2012 13:38:38] PHP Warning:  Unterminated comment starting line 1337 in /home/userinca/public_html/panel/lib/util.php on line 1337
+[13-Jul-2012 13:38:38] PHP Fatal error:  fatal flex scanner internal error--end of buffer missed in /home/userinca/public_html/panel/lib/util.php on line 1337
+[19-Jul-2012 17:43:14] PHP Warning:  Unexpected character in input:  ''' (ASCII=39) state=1 in /home/userinca/public_html/panel/config/tablas.php on line 1872
+[19-Jul-2012 17:43:14] PHP Parse error:  syntax error, unexpected ':', expecting ')' in /home/userinca/public_html/panel/config/tablas.php on line 1872
+[19-Jul-2012 17:43:21] PHP Warning:  Unterminated comment starting line 2760 in /home/userinca/public_html/panel/config/tablas.php on line 2760
+[19-Jul-2012 17:43:21] PHP Fatal error:  fatal flex scanner internal error--end of buffer missed in /home/userinca/public_html/panel/config/tablas.php on line 2760
+[19-Jul-2012 18:19:15] PHP Parse error:  syntax error, unexpected $end in /home/userinca/public_html/panel/config/tablas.php on line 2346
+[20-Jul-2012 12:08:31] PHP Warning:  Unexpected character in input:  ''' (ASCII=39) state=1 in /home/userinca/public_html/panel/config/tablas.php on line 2481
+[20-Jul-2012 12:08:31] PHP Parse error:  syntax error, unexpected $end in /home/userinca/public_html/panel/config/tablas.php on line 2481
+[23-Jul-2012 17:14:23] PHP Parse error:  syntax error, unexpected $end, expecting ')' in /home/userinca/public_html/panel/config/tablas.php on line 2232
+[23-Jul-2012 17:14:23] PHP Parse error:  syntax error, unexpected $end, expecting ')' in /home/userinca/public_html/panel/config/tablas.php on line 2502
+[24-Jul-2012 16:56:10] PHP Warning:  Unterminated comment starting line 59 in /home/userinca/public_html/panel/head.php on line 59
+[24-Jul-2012 16:56:10] PHP Fatal error:  fatal flex scanner internal error--end of buffer missed in /home/userinca/public_html/panel/head.php on line 59
+[24-Jul-2012 17:01:43] PHP Parse error:  syntax error, unexpected '?' in /home/userinca/public_html/panel/vista_ax.php on line 464
+[30-Jul-2012 17:24:03] PHP Fatal error:  Maximum execution time of 60 seconds exceeded in /home/userinca/public_html/panel/lib/PHPExcel/Writer/Excel5/Worksheet.php on line 426
+[30-Jul-2012 17:24:03] PHP Fatal error:  Uncaught exception 'Exception' with message 'Cell coordinate can not be zero-length string.' in /home/userinca/public_html/panel/lib/PHPExcel/Cell.php:511
+Stack trace:
+#0 /home/userinca/public_html/panel/lib/PHPExcel/Style.php(283): PHPExcel_Cell::coordinateFromString('')
+#1 /home/userinca/public_html/panel/exportar_excel.php(282): PHPExcel_Style->applyFromArray(Array)
+#2 {main}
+  thrown in /home/userinca/public_html/panel/lib/PHPExcel/Cell.php on line 511
+[30-Jul-2012 17:25:22] PHP Fatal error:  Maximum execution time of 60 seconds exceeded in /home/userinca/public_html/panel/lib/PHPExcel/Writer/Excel5/BIFFwriter.php on line 151
+[31-Jul-2012 03:27:49] PHP Fatal error:  Maximum execution time of 60 seconds exceeded in Unknown on line 0
+[07-Aug-2012 09:41:41] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 78 bytes) in /home/userinca/public_html/panel/lib/PHPExcel/Shared/String.php on line 561
+[27-Aug-2012 15:16:05] PHP Parse error:  syntax error, unexpected $end in /home/userinca/public_html/panel/lib/util.php on line 371
+[27-Aug-2012 15:54:11] PHP Parse error:  syntax error, unexpected $end, expecting ')' in /home/userinca/public_html/panel/config/tablas.php on line 8275

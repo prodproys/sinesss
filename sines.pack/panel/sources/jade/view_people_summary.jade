@@ -1,0 +1,32 @@
+//- ****
+//- Archivo: view_people_summary.jade
+//- Archivo Transpilado: panel/views/dist/view_people_summary.php
+//- Author: Sinesss
+//- Tipo: Plantilla de vista PHP
+//- Lenguaje: Pug
+//- Descripción:  Este archivo es el template jade de la seccion resumen de la pagina de una persona
+//- ****
+//- 
+
+.container.people_summary
+    each block in blocks
+        h3 #{block.nombre}
+        .row-table
+            table.table.table-bordered.table-sm
+                thead
+                    th 
+                    each row in monthA
+                        th(scope='col') #{row}
+                tbody
+                    each months,year in block.calendar
+                        tr
+                            td #{year}
+                            each status in months
+                                td: span.status(Class="status #{status}")
+        ul.leyenda
+            li #[span.status.payed] #[span Pago registrado]
+            li #[span.status.debt] #[span Deuda registrada]
+            li #[span.status.empty] #[span Sin registro]
+
+
+

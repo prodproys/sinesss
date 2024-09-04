@@ -1,0 +1,120 @@
+@media print
+    .type_file
+        display none !important
+    .bloque_titulo .titulo > div > a.type_file
+        display block !important
+    body
+        background white
+    .titulo
+        margin 20px 0
+    .logo_panel 
+        flex-direction: row
+        height 60px !important
+        width auto !important
+        img
+            max-height 100%
+
+    .controls-rows,
+    .menu_content,
+    .i_mmm,
+    .foot,
+    .menus,
+    .controles,
+    .lc,
+    #abri_cerrar_crear
+        display none !important
+    .link_header
+        text-align right
+        padding-right 5px
+    .badge,.bld a,.bd
+        background transparent !important 
+        color black !important
+        font-size 13px !important
+        border none !important
+        font-weight 400 !important
+    .nc
+        border-bottom 1px solid grey
+        border-top 1px solid grey
+    #ordenable 
+        float left
+        border-right 1px solid #ddd
+        .bl
+            // border 1px solid red
+            // max-height 30px
+            .bld
+                // border 1px solid blue
+                padding-top 0
+                padding-bottom 0
+                border-bottom 1px solid #ddd
+                min-height 0px
+                .nc
+                    color #000 !important;
+                    font-weight bold
+                    font-size 10px !important
+                .bd
+                    padding-top 0
+                    padding-bottom 0
+                    font-size 10px !important
+                    min-height 0px !important
+                    height auto !important
+                    // display block
+                    color #666 !important
+    .inner_listado
+        margin-bottom 0px
+    .nav-tabs
+        display block
+        border 0px !important
+        .nav-item
+            border 0px !important
+            padding-left 0
+            // display none
+            .nav-link
+                display none !important
+                &.active
+                    border 0px !important
+                    display block !important
+                    font-size 24px
+                    padding-left 0
+    .detail
+        // border 1px solid red
+        overflow hidden
+        > ul
+            // border 1px solid blue
+            .bl
+                padding 0px
+                border 0px !important
+                box-shadow none !important                
+                border 1px solid green
+                .ldd
+                    .nc
+                        border-bottom 0 !important
+                        border-top 0 !important
+                // #ordenable .bl.modificador_grilla:first-child .nc
+    .modeModal
+        #modal-container .controModal
+            max-width 100%
+            .modal-dialog
+                max-width 100%
+                button.close
+                    display none
+                .modal-footer
+                    display none
+    a.modal-new-document-link
+    a.modal-link
+        display none !important
+    
+.mode_main
+	#inner
+		display block
+	#inner_after
+		display none !important
+	.menu_detail
+		display none !important
+
+.mode_sub
+	#inner
+		display none !important
+	#inner_after
+		display block
+	.menu_detail
+		display flex

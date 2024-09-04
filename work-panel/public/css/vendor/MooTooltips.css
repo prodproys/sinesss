@@ -1,0 +1,190 @@
+/* tooltip design */
+.ToolTips {
+	display: block;
+	position: absolute;
+	width: auto;
+}
+
+.ToolTips .sticky_close {
+	display: block;
+	position: absolute;
+	top: 1px;
+	right: 3px;
+	background: url(MooTooltips/fileclose.png);
+	width: 16px !important;
+	height: 16px !important;
+	line-height: 16px !important;
+	font-size: 0px !important;
+	z-index: 100000000 !important;
+}
+
+.ToolTips .message {
+	display: block;
+	position: relative;
+	background-color: #FFF;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	padding: 0px 10px;
+}
+
+/* here we do a little switch. If the tooltip is positioned above the element hovered, it changes the classes on the header/footer divs in order to point at the element hovered */
+.ToolTips .dockBottomHeader {
+	display: block;
+	position: relative;
+	height: 33px;
+}
+
+.ToolTips .uno {
+	left: 0px;
+	width: 60px;
+}
+
+.ToolTips .dos {
+	left: 60px;
+	width: 100%;
+}
+
+.ToolTips .tre {
+	right: 0px;
+	width: 14px;
+}
+
+.ToolTips .dockTopFooter {
+	display: block;
+	position: relative;
+	height: 38px;
+	padding-left: 60px;
+	padding-right: 14px;
+}
+
+.ToolTips .dockTopFooter div {
+	display: block;
+	height: 38px;
+	bottom: 0px;
+}
+
+.ToolTips .dockTopFooter .uno {
+	position: absolute;
+	background: url(MooTooltips/dockTopFooter_uno.png) no-repeat bottom;
+}
+
+.ToolTips .dockTopFooter .dos {
+	background: url(MooTooltips/dockTopFooter_dos.png) repeat-x bottom;
+}
+
+.ToolTips .dockTopFooter .tre {
+	position: absolute;
+	background: url(MooTooltips/dockTopFooter_tre.png) no-repeat bottom;
+}
+
+.ToolTips .dockBottomFooter {
+	display: block;
+	position: relative;
+	background: url(MooTooltips/dockBottomFooter.png);
+	height: 14px;
+	line-height: 11px;
+	font-size: 0px;
+	clear: both;
+}
+/* this one has more height to display the close button in case sticky tooltips are on */
+.ToolTips .dockTopHeader {
+	display: block;
+	position: relative;
+	height: 20px;
+	line-height: 20px;
+	font-size: 0px;
+	padding-left: 60px;
+	padding-right: 14px;
+}
+
+.ToolTips .dockTopHeader div {
+	display: block;
+	height: 20px;
+	line-height: 20px;
+	font-size: 0px;
+	top: 0px;
+}
+
+.ToolTips .dockTopHeader .uno {
+	position: absolute;
+	background: url(MooTooltips/dockTopHeader_uno.png) bottom center
+		no-repeat;
+}
+
+.ToolTips .dockTopHeader .dos {
+	background: url(MooTooltips/dockTopHeader_dos.png) bottom center
+		repeat-x;
+}
+
+.ToolTips .dockTopHeader .tre {
+	position: absolute;
+	background: url(MooTooltips/dockTopHeader_tre.png) bottom center
+		no-repeat;
+}
+
+* html .ToolTips .dockBottomHeader {
+	background: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='MooTooltips/dockBottomHeader.png'
+		);
+}
+
+* html .ToolTips .dockBottomFooter {
+	background: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='MooTooltips/dockBottomFooter.png'
+		);
+}
+
+* html .ToolTips .dockTopHeader {
+	background: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='MooTooltips/dockTopHeader.png'
+		);
+}
+
+* html .ToolTips .dockTopFooter {
+	background: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='MooTooltips/dockTopFooter.png'
+		);
+}
+
+* html .ToolTips .sticky_close {
+	background: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='MooTooltips/fileclose.png'
+		);
+}
+
+/* this is just a div displaying the loading animated .gif */
+.loading {
+	display: block;
+	margin: 0px auto 0px;
+	background: url(MooTooltips/ajax-loader.gif) center center no-repeat;
+	width: 31px;
+	height: 50px;
+}
+
+/* tip container */
+.tipContainer {
+	display: none;
+}
+
+/* beautify the tooltip content */
+.ToolTips .message {
+	font-size: 12px;
+	text-align: justify;
+}
+
+.ToolTips .message h3 {
+	font-size: 16px;
+	margin: 0px 0px 10px;
+	padding: 0px;
+	color: #FF6600;
+}
+
+.ToolTips .message .rights {
+	display: block;
+	clear: both;
+	margin: 15px 0px 0px;
+	text-align: right;
+	font-size: 11px;
+	color: #666666;
+}
+ {}

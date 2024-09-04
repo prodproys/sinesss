@@ -1,0 +1,13 @@
+#inner_span_num
+    span.spa2n #[span#span_num #{total.num}] #{total.item}
+    span.range  #{range}
+
+.inner_span_tren#inner_span_tren
+    ul.pagination.pagination-sm.justify-content-right
+        each item in train
+            if item.href
+                li.page-item: a.page-link(href="#{item.href}",onclick="#{item.onclick}")!=item.text
+            else if (current==item.text)
+                li.page-item.active: a.page-link(href="#",tabindex="-1")!=current
+            else
+                li.page-item.disabled: a.page-link(href="#",tabindex="-1")!=item.text

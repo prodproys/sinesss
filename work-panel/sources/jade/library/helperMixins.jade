@@ -1,0 +1,33 @@
+
+mixin menu_items(items)
+	each men_item in items
+		li(Class="#{men_item.class}")
+			if men_item.url
+				+link_item(men_item)
+			else
+				+span_item(men_item)
+			if(men_item.items)
+				if(men_item.check)
+					input(id="#{men_item.check}",type="checkbox")
+				ul.li_cabecera
+					+menu_items(men_item.items)
+
+
+mixin link_item(item)
+	a(href="#{item.url.toLowerCase()}",
+		rel="#{item.rel}",
+		onclick="#{item.onclick}",
+		title="#{item.name.toLowerCase()}",
+		Class="#{item.aclass}",
+		data-url="#{item.dataurl}",
+		for="#{item.check}",
+		target="#{item.target}") #{item.name}
+		if item.sub
+			b #{item.sub}
+
+mixin span_item(item)
+	a(onclick="#{item.onclick}",
+		data-url="#{item.dataurl}",
+		Class="#{item.aclass}") #{item.name}
+		if item.sub
+			b #{item.sub}

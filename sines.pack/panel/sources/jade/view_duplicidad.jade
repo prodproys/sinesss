@@ -1,0 +1,51 @@
+//- ****
+//- Archivo: view_duplicidad.jade
+//- Archivo Transpilado: panel/views/dist/view_duplicidad.php
+//- Author: Sinesss
+//- Tipo: Plantilla de vista PHP
+//- Lenguaje: Pug
+//- Descripción: Este archivo es el template jade de la pagina de mantenmiento para revisar la duplicidad de personas
+//- ****
+//- 
+
+.container.div_bloque_cuerpo
+	.bloque_titulo#barra_titulo: .titulo: div
+		a.type_file(href="pages.php?page=#{_GET.page}") Herramienta para resolver duplicidad
+	.alert.alert-primary.mb-0 Versión 1
+
+	//- each val,vari in _GET
+	//- 	div #{vari} : #{val}
+	.form-import
+		if !_GET.step
+			form(
+				method="get",
+				action="pages.php"
+				)
+				input(type='hidden',name='page',value="#{_GET.page}")
+				input(type='hidden',name='step',value='process')
+				.form-group.row
+					label(for="year-format").col-sm-2.col-form-label CÓDIGO INCORRECTO
+					.col-sm-2: input#incorrect.form-control-file(type='text',name='incorrect')
+				
+				.form-group.row
+					label(for="month-format").col-sm-2.col-form-label CÓDIGO CORRECTO
+					.col-sm-2: input#correct.form-control-file(type='text',name='correct')
+
+				button.btn.btn-primary(type='submit') Enviar
+		else if _GET.step=='process' 
+			div
+				each item in out
+					if item.incorrect.id
+						div 
+							strong Código Incorrecto : 
+							a(href="custom/people.php?i=#{item.incorrect.id}#filter=''",target="_blank") #{item.incorrect.code}
+					if item.correct.id
+						div 
+							strong Código Correcto : 
+							a(href="custom/people.php?i=#{item.correct.id}#filter=''",target="_blank") #{item.correct.code}
+			
+			a.btn.btn-primary(href="pages.php?page=#{_GET.page}&step=process2&incorrect=#{_GET.incorrect}&correct=#{_GET.correct}",target="_blank") Procesar
+
+		else if _GET.step=='process2'
+			div RESUELTO
+

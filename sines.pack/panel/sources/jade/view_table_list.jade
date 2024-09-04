@@ -1,0 +1,45 @@
+//- ****
+//- Archivo: view_table_list.jade
+//- Archivo Transpilado: panel/views/dist/view_table_list.php
+//- Author: Sinesss
+//- Tipo: Plantilla de vista PHP
+//- Lenguaje: Pug
+//- Descripción:  Este archivo es el template jade de tabla generica
+//- ****
+//- 
+
+.controls-rows
+    .sub-controls
+        each control in controls
+            != control
+.table-responsive
+    table(Class="#{tabla_class} table table-bordered table-sm table-striped")
+        thead
+            each row in headers
+                tr
+                    each cell,cellindex in row
+                        th(
+                            Class=" #{cellindex}",
+                            scope='col',
+                            colspan="#{cell.colspan}",
+                            rowspan="#{cell.rowspan}"
+                            ) #{cell.text}
+        tbody
+            each row in items
+                tr
+                    each cell,cellindex in row
+                        td(Class="#{cellindex}") 
+                            if cell.url
+                                a(href="#{cell.url}") #{cell.text}
+                            else
+                                span #{cell.text}
+        tfoot
+            each row in footers
+                tr
+                    each cell,cellindex in row
+                        th(
+                            Class=" #{cellindex}",
+                            scope='col',
+                            colspan="#{cell.colspan}",
+                            rowspan="#{cell.rowspan}"
+                            ) #{cell.text}

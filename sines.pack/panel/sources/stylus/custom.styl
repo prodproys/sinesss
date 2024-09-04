@@ -1,0 +1,681 @@
+MAX_WIDTH=1450px // ancho maximo de la pagina
+MENU_WIDTH=260px // ancho del menú
+MARGIN_MENU=30px // distanci del menú al contenido
+HEADER_HEIGHT=100px
+
+
+
+maxwide            = MAX_WIDTH
+tablet             = 992px
+mobile             = 600px
+
+// media queries
+$small        = 'only screen and (max-width : '+mobile+')'
+$small-medium = 'only screen and (max-width : '+tablet+')'
+$large        = 'only screen and (min-width : '+tablet+')'
+$medium-large = 'only screen and (min-width : '+mobile+')'
+$maxim        = 'only screen and (max-width : '+maxwide+')'
+
+$medium-small = $small-medium
+$large-medium = $medium-large
+
+
+
+
+body
+	// background-color lighten(navy,50)
+	// background-color lighten(brown,50)
+	// background-color white
+	// background-color pink
+	// background-color lightgreen
+	// background-color yellow
+	// background-color darken(white,3)
+	background linear-gradient(to bottom,lighten(#d3d2d1,10) 50%,white)
+	background #DEF3FA !important
+
+	// background-color #eee
+	// background linear-gradient(to bottom,#fff 60%,#a3853e)
+    // background-image linear-gradient(to bottom,#212835 20%,black) !important
+	// background-image linear-gradient(to right,#fff 30%,#a3853e)
+	&.modulo_login
+		background linear-gradient(to bottom,#fff 80%,rgba(#a3853e,.9))
+	#inner_after
+		background linear-gradient(to bottom,#fff .1%,transparent)
+		min-height 240px
+		padding-bottom 100px
+	.modulo_settlements
+		#inner_after
+			.menudown
+				.i_ec
+					display none !important
+
+body:not(.dark)
+	.menu_content
+		.ul_menus 
+			li.group label.padre
+				background linear-gradient(to right, #19b0c2 50%, #ddd 90%) !important
+				background #19b0c2 !important
+				&:hover
+					background linear-gradient(to right, #19b0c2 70%, #ddd 90%) !important
+				&:after
+					color #777
+	.check_padre:checked + li.group
+		label.padre
+			background #19b0c2 !important
+	.bloque_titulo
+		background-image linear-gradient(to left,transparent 1%,lighten(#a1a09d,20))
+.modulo_login
+	#div_allcontent
+		border-color transparent
+
+.dark
+	.menu_content
+		.ul_menus 
+			li.group label.padre
+				// background: rgb(0,0,0);
+				// background linear-gradient(0deg, rgba(0,0,0,.6) 8%, rgba(25,176,194,1) 51%, rgba(0,0,0,.6) 95%) !important
+				background linear-gradient(to left,darken(#19b0c2,10) 50%, #212835) !important
+				background darken(#19b0c2,10) !important
+				&:hover
+					background linear-gradient(to left, darken(#19b0c2,10) 60%, #212835) !important
+	.check_padre:checked + li.group
+		label.padre
+			background linear-gradient(to left, darken(#19b0c2,10) 85%, #212835) !important
+			background darken(#19b0c2,10) !important
+	.link_header a
+		// display inline-block
+		// background-image linear-gradient(0.50turn,#907123,#19b0c2)
+		// background-clip text
+		// -webkit-text-fill-color transparent
+	.bloque_titulo .titulo .type_file:last-child
+		background-image linear-gradient(to right,#fff 30%,#19b0c2)
+		background-clip text
+		-webkit-text-fill-color transparent
+
+	&.modulo_primaryshares,
+	&.modulo_secondaryshares,
+	&.modulo_payments,
+	&.modulo_records,
+	&.modulo_documents,
+	&.modulo_operations
+		.bloque_titulo .titulo .type_file:last-child
+			background-image linear-gradient(to right,#fff 30%,#a3853e)
+	// .bl .bd.fmf
+	// 	color lighten(#19b0c2,30)
+
+					
+
+#menu_main 
+	.mcontent > ul
+		> li 
+			> a:before
+				font-family fontawesome		
+				margin-right .7em
+			&.menu_link_people > a:before
+				content "\f2c2"
+			&.menu_link_zones > a:before
+				content "\f1b2"
+			&.menu_link_settlements > a:before
+				content "\f0ac"
+			&.menu_link_locations > a:before
+				content "\f041"
+			&.menu_link_documents > a:before
+				content "\f0c5"
+			&.menu_link_dashboard > a:before
+				content "\f201"	
+			&.menu_link_alerts > a:before
+				content "\f0e7"												
+			&.menu_link_general > a:before
+				content "\f06e"
+// .modulo_people
+// 	.detail
+// 		.li_cabecera > li
+// 			a:not(.i_ec):not(.i_x), div.menu_limiter
+// 				display none !important
+
+.currency
+	&:before
+		content "S/."
+		display contents
+	
+
+.page_dashboard,.dashboard
+	.highcharts-figure, .highcharts-data-table table
+		min-width 310px
+		max-width 100%
+		margin 3em 0
+	.div_bloque_cuerpo
+		margin auto
+
+	.dashboard-car
+		background white
+		background linear-gradient(to top,#eee 50%,#f7f7f7)
+		border 1px solid #ccc
+		color white
+		margin-bottom .7em
+		border-radius 10px
+		> a, > .nolink
+			font-size 1.5em
+			padding 1em 1.5em	
+			display flex
+			align-items center
+			justify-content space-between
+			// &.nolink
+			// 	cursor default
+			// 	&:hover
+			// 		text-decoration none
+			// 		color black
+		> .nolink
+			color black
+		@media $large
+			> a, > .nolink
+				padding 0 .7em
+				font-size 18px
+				font-weight normal
+				height 100px
+				span 
+					font-size 23px
+
+.dark
+	.dashboard-car
+		background linear-gradient(to top,#000000 30%,#0f1016)
+		// background #0f1016
+		border-color #0f1016
+		color #75809a
+		border-radius 10px
+		.nolink
+			color white
+
+.form-import
+	background-color white
+	padding 3rem 3rem
+
+.dark
+	.form-import
+		background-color #1d232e
+		border 1px solid #404040
+
+// .filters
+// 	#filtr_last_primary,#filtr_last_secondary
+
+
+
+.people_summary
+	padding 2rem
+	h3
+		font-size: 18px
+		padding 1rem 0
+	.row-table
+		display flex
+		justify-content center
+		padding 0
+		table
+			width auto
+			tbody tr td 
+				text-align center
+				vertical-align baseline
+				color black
+
+
+	span.status
+		font-family fontawesome
+		font-size 15px
+		// color white
+		&:before
+			content "\f274"
+		&.payed
+			color #64dd17
+		&.debt
+			color #ff5252
+		&.empty
+			color black
+	ul.leyenda
+		display flex
+		justify-content flex-end
+		li
+			margin 0 1em
+			font-size 13px
+
+.dark .people_summary 
+	table tbody tr td,
+	span.empty
+		color white
+	
+.tabla_standard
+	// border 3px solid red !important
+	// border 4px solid grey !important
+	thead
+		th
+			text-transform uppercase
+			text-align center !important
+			vertical-align middle
+			border-bottom 3px solid grey
+			&:first-child
+				text-align left !important
+			&.caee_aportantes
+			&.caeecas_aportantes
+			&.caeecn_aportantes
+			&.regular_aportantes
+			&.regularcas_aportantes
+			&.regularcn_aportantes
+			&.total_aportantes
+			&.deduccion
+				border-left 3px solid grey
+	tbody
+	tfoot
+		td
+			color grey
+		.id_settlement
+			// max-width 100px
+			font-weight: bold
+			// color black
+		.caee_aportantes
+		.caeecas_aportantes
+		.caeecn_aportantes
+		.regular_aportantes
+		.regularcas_aportantes
+		.regularcn_aportantes
+		.total_aportantes
+			text-align right
+			border-left 3px solid grey
+		.caee_total
+		.caeecas_total
+		.caeecn_total
+		.regular_total
+		.regularcas_total
+		.regularcn_total
+		.total_total	
+			text-align right
+		.deduccion
+			text-align right
+			border-left 3px solid grey
+			// color black
+	tfoot
+		tr
+			th
+				border-top 3px solid grey
+				font-weight bold
+
+.detail
+	.bl
+		&.line-nomember
+			.menudown .li_cabecera a.form_people_action_desafiliar_person
+				display none !important
+		&.line-member
+			.menudown .li_cabecera a.form_people_action_afiliar_person
+				display none !important
+		&.line-nocaee
+			.menudown .li_cabecera a.form_people_action_desafiliar_caee
+				display none !important
+		&.line-iscaee
+			.menudown .li_cabecera a.form_people_action_afiliar_caee
+				display none !important
+		// .menudown .li_cabecera a.form_people_action_agregar_aportacion
+		// 	display none !important
+
+
+.logo_panel img
+	max-height 60px
+.main_content .logo_panel
+	height 60px
+.middleware_header
+	width 100%
+	height auto
+	padding-bottom 15px
+	padding-top 10px
+	--menu-width MENU_WIDTH
+	@media $small-medium
+		display none
+		--menu-width 100%
+	.nombre_completo
+		font-size 1.2em
+		width calc( var(--menu-width) - 20px )
+		text-align center
+		text-transform: uppercase
+	.butones
+		width calc( var(--menu-width) - 20px )
+		// text-align center
+		margin-top .5em
+		display flex
+		justify-content center
+		padding 0 3rem
+		> a
+			// width 40px
+			font-family fontawesome
+			font-size 1.2em
+			margin 0 0.7em
+			&:hover
+				text-decoration none
+			&.form_user_change_password:before
+				content "\f13e"
+			&.form_user_edit:before
+				content "\f2bd"
+			&.logout_link:before
+				content "\f2f5"
+			&.link_dark_mode:before
+				content "\f186"
+			&.link_light_mode:before
+				content "\f185"
+
+.controls-rows
+	#filtr_nombre_dl
+		order -1
+
+
+.modulo_settlements
+	#inner_after
+		#filtr_id_settlement,
+		#filtr_id_location,
+		#filtr_nombre_dl
+			display none
+.modulo_locations
+	#inner_after
+		#filtr_id_settlement,
+		#filtr_nombre_dl
+			display none
+.modulo_zones
+	#inner_after
+		#filtr_id_settlement,
+		#filtr_id_location,
+		#filtr_nombre_dl
+			display none
+.page_alerts
+	#inner_after
+		#filtr_nombre_dl
+			display none
+
+.special_pages.page_alerts
+	#inner_after
+		select[data-field='birthday']
+			display none
+.filfchspan
+	display none !important		
+
+// modal 
+.control_shares
+	overflow auto
+	padding 1rem 0
+	h3
+		font-size: 18px
+		padding 1rem 0
+	.row-table
+		display flex
+		justify-content center
+		padding 0
+		overflow auto
+		height 154px
+		table
+			width 100%
+			thead,tfoot
+				tr th
+					padding .3rem 0
+					font-weight normal
+					text-align center
+					font-size 11px
+					text-transform uppercase
+			tbody 
+				tr td 
+					&.year
+						width 34px
+						font-size 11px
+					text-align center
+					vertical-align baseline
+					white-space nowrap
+					padding 0
+					label
+						padding .3rem 0
+						display block
+					span.status
+						font-family fontawesome
+						font-size 15px
+						// color white
+						&:before
+							content "\f274"
+					&.payed span.status
+						color #64dd17
+					&.debt 
+						background #ff5252
+						span.status
+							color #ff5252
+					&.empty span.status
+						color black
+	ul.leyenda
+		display flex
+		justify-content flex-end
+		li
+			margin 0 1em
+			font-size 13px
+
+// menu search
+.menus
+	a
+		padding 0 .5em
+	.div-search
+		padding 3px 0
+		position relative
+		.search-icon
+			position absolute
+			top 0px
+			z-index 10
+			width auto
+			height 100%
+			// border 1px solid green
+			display flex
+			align-items center
+			justify-content center
+			width 30px
+			&:before
+				font-size 1rem
+				font-family: 'fontawesome'
+				content "\f002"
+				color #666
+		input
+			&[type=text]
+				padding-left 30px
+				width 184px
+				// background transparent
+				// transition width .1s 
+				// @media $large
+				// &::placeholder
+				// 	visibility hidden
+				&:focus
+					width 600px
+					// background white
+					&::placeholder
+						color #bbb
+@media $medium-small
+	.menus
+		margin-bottom 0 !important
+		flex-wrap wrap
+		.div-search
+			width 100%
+			input#main-search_dl
+				width 100%
+				&:focus
+					width 100%
+
+.dark
+	.menus
+		// background #333 !important
+		a
+			color white !important
+
+.main_content .link_header
+	visibility hidden
+
+// autocomplete
+.ma-selected
+	background white !important
+.ma-container
+	// margin-top -1px
+	color black
+	ul
+		border-bottom 1px solid grey
+		border-left 1px solid grey
+		border-right 1px solid grey	
+		li
+			&.ma-odd
+				background-color white !important
+			&.ma-even
+				background-color darken(white,4) !important
+			&.ma-hover
+				background-color #edf5ff !important
+			padding .3em .5em
+			font-size 14px
+			.code_
+				display block
+				color grey
+				font-size 11px
+			.member_0,.member_1,.caee_0,.caee_1
+				background black
+				color white
+				float right
+				margin 0 0 0 3px
+				padding 0 .5em
+				text-transform uppercase
+				border-radius 5px
+				font-size .7rem
+			.member_1
+				background #00c292
+			.caee_1
+				background #ab8ce4
+			strong
+				color red
+
+.modulo_people .formulario
+	// #id_in_is_member
+	// #id_in_is_caee
+	#id_in_last_primary
+	#id_in_last_secondary
+	#id_in_id_personalink
+	#id_in_codeold
+		display none
+
+.modulo_documents
+	.form_people_new_document
+		display none !important		
+
+.modulo_people
+	#inner_after
+		#filtr_id_settlement
+			display none
+.modulo_documents
+	#filtr_code_dl
+		width 410px !important
+
+.modulo_people 
+	#inner_after
+		.menudown
+			.i_ev
+			.menu_limiter
+				display none !important
+
+// .modulo_documents
+// 	.menudown
+// 		display none !important
+
+.table_container
+	overflow auto
+
+.page_import2
+	.tabla_csv
+		th,td
+			white-space nowrap
+		tr
+			border-left-width 10px
+			border-left-style solid
+		.unreconized
+			background lighten(pink,5) !important
+		.hubo_primary
+			// background lighten(green,20) !important
+			border-left-color yellow
+			// text-decoration line-through
+		.habra_primary
+			background lighten(yellow,30) !important
+		.hubo_secondary
+			// background lighten(navy,50) !important
+			border-left-color green
+			// text-decoration line-through
+		.habra_secondary
+			background lighten(green,60) !important
+		.naa
+			background grey !important
+
+	ul.leyenda
+		li
+			border-left-width 10px
+			border-left-style solid
+			border-left-color white
+			padding-left .5rem
+			font-size 15px
+			span 
+				float right
+				margin-right .6rem
+			// font-weight bold
+		li.unreconized
+			background lighten(pink,5) !important
+		li.hubo_primary
+			background white !important
+			border-left-color yellow
+		li.habra_primary
+			background lighten(yellow,30) !important
+		li.hubo_secondary
+			background white !important
+			border-left-color green
+		li.habra_secondary
+			background lighten(green,60) !important
+
+
+	.tabla_csv
+		&.unreconized
+			tbody tr
+				display none
+				&.unreconized
+					display table-row
+		&.hubo_primary
+			tbody tr
+				display none
+				&.hubo_primary
+					display table-row
+		&.habra_primary
+			tbody tr
+				display none
+				&.habra_primary
+					display table-row
+		&.hubo_secondary
+			tbody tr
+				display none
+				&.hubo_secondary
+					display table-row
+		&.habra_secondary
+			tbody tr
+				display none
+				&.habra_secondary
+					display table-row
+	#button-import span
+		font-size 14px
+		cursor pointer
+	ul.nav.nav-tabs 
+		h6
+			margin 0
+	#cargando 
+		h6
+			color red
+
+.permiso_2 .menu_user
+	display none
+
+
+.special_pages.page_alerts
+	.i_ec
+		display none !important
+	.i_x
+		display none !important
+
+.li_cabecera 
+	.revision
+		display none !important
+
+.permiso_5 .li_cabecera 
+	.revision
+		display block !important

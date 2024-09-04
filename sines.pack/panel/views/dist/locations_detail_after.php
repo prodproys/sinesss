@@ -1,0 +1,1 @@
+<ul class="nav nav-tabs menu_detail menu_people_detail"><li class="nav-item"><a onclick="ax('paginaUrl','','1','PEOPLE','inner_after','&id_location=<?php echo htmlspecialchars($linea['id']) ?>','sub')" class="nav-link link-people">Personas</a></li></ul>

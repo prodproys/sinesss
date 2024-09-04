@@ -1,0 +1,115 @@
+//
+.filters
+
+	.form-control
+		width: auto
+	// background #FCFCFC
+	flex-grow 1
+	// padding 1em 0
+	display flex
+	flex-direction row
+	// justify-content space-between
+	// margin-top 7px
+	&.form-group
+		margin 0
+	select
+		// display inline-block
+		// margin 0 -1px 5px 0px
+		border 1px solid #ccc
+		// font-size 1em
+		text-align justify
+		// color #999
+		max-width 140px !important
+		width auto !important
+		min-width 120px
+		display inline-block
+		option
+			font-weight normal
+			// background-color #FFF
+			color #000
+			&.empty
+				color #999999
+			&.filyer
+				font-weight bold
+	.inuse
+		background-color #fdf7e3 !important
+		color #0c0d0e !important
+		font-weight bold !important
+		border 1px solid #f9d96d !important		
+	.control-filter-date
+		display inline-flex
+		margin-right 2px
+		// flex-wrap wrap
+		&.format_no-specific
+			.range
+				display none
+		select
+			width auto !important
+			min-width 0
+			max-width 100% !important
+			max-height 31px 
+		
+		.filfchspan
+			float none;
+			padding .3em .7em;
+			font-weight bold;
+			text-transform uppercase;
+			vertical-align top;
+			display inline-block;       
+	// .byother
+	// 	// visibility hidden
+	// 	// display flex
+	// 	// flex-flow row wrap
+	// 	// justify-content space-around
+	// 	clear left
+	select
+		margin-left 0px
+		margin-right 2px
+		// selectfirst-child
+		// margin-left 0	
+
+
+.barfiltro
+	background-color #FFC
+	padding 5px 8px
+	color #000
+	text-align center
+	border-bottom 1px solid #999
+
+.smcheck
+	background-color #EEE
+
+
+
+
+
+.blo_filtros
+	float left
+	width auto
+	height auto
+	padding-left 5px
+	a
+		background-color #EEE
+		border 1px outset #FFF
+		border-top 1px solid #BBB
+		border-bottom 0
+		float left
+		font-size 12px
+		margin-left 0px
+		margin-top 3px
+		margin-bottom -1px
+		padding 1px 4px 1px
+		text-decoration none
+		text-transform capitalize
+		color #000
+		border-radius 5px 5px 0px 0px
+		&:hover,
+		&.selected
+			background-color #FFF
+			border 1px outset #999
+			border-top 1px solid #999
+			border-bottom 1px solid #FFF
+			color #000
+	b
+		float left
+		margin 3px 0px 0px 1px
